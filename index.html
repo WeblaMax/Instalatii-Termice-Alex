@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
@@ -688,7 +688,7 @@
             box-shadow: var(--shadow-lg);
         }
         .portfolio-item.hidden { display: none; }
-        .portfolio-item img {
+        .portfolio-item img, .portfolio-item video {
             width: 100%;
             height: 250px;
             object-fit: cover;
@@ -708,7 +708,7 @@
             font-size: 0.92rem;
             line-height: 1.55;
         }
-        .portfolio-item:hover img { transform: scale(1.08); }
+        .portfolio-item:hover img, .portfolio-item:hover video { transform: scale(1.08); }
         .portfolio-overlay {
             position: absolute;
             inset: 0;
@@ -1304,7 +1304,7 @@
                 <span class="brand-name"><span class="brand-ice">Instalații</span> <span class="brand-fire">Termice Alex</span></span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Acasă</a></li>
+                <li><a href="#portfolio">Acasă</a></li>
                 <li><a href="#about">Despre Noi</a></li>
                 <li><a href="#" onclick="openServiceFilterModal(event)">Servicii</a></li>
                 <li><a href="#portfolio">Portofoliu</a></li>
@@ -1318,122 +1318,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- HERO -->
-    <section class="hero" id="hero">
-        <div class="hero-pipes"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="reveal">Soluții Complete în <span>Instalații Termice</span></h1>
-                <p class="reveal reveal-delay-1">Montaj sisteme termice civile și industriale, camere tehnice, centrale, pompe de căldură, climatizare și instalații sanitare. Execuție curată, precisă și durabilă.</p>
-                <div class="hero-buttons reveal reveal-delay-2">
-                    <a href="#" onclick="openServiceFilterModal(event)" class="btn btn-primary"><i class="fas fa-fire"></i> Vezi Serviciile</a>
-                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> Contactează-ne</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DESPRE NOI -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 class="reveal">Cine <span>Suntem</span></h2>
-                    <p class="reveal reveal-delay-1">Instalații Termice Alex execută lucrări de montaj și modernizare pentru sisteme termice civile și industriale: case, apartamente, spații comerciale, hale și camere tehnice complexe.</p>
-                    <p class="reveal reveal-delay-2">Lucrăm cu atenție la trasee, îmbinări, echipamente și testare finală. Fiecare proiect este tratat tehnic, curat și transparent, de la evaluare până la predarea lucrării.</p>
-                    <div class="stats-row">
-                        <div class="stat-card reveal reveal-delay-1">
-                            <i class="fas fa-calendar-alt"></i>
-                            <h4>13+</h4>
-                            <p>Ani Experiență</p>
-                        </div>
-                        <div class="stat-card reveal reveal-delay-2">
-                            <i class="fas fa-check-circle"></i>
-                            <h4>100+</h4>
-                            <p>Proiecte Finalizate</p>
-                        </div>
-                        <div class="stat-card reveal reveal-delay-3">
-                            <i class="fas fa-award"></i>
-                            <h4>100%</h4>
-                            <p>Garanție Lucrări</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image reveal reveal-delay-2">
-                    <img src="assets/termic-19.jpg" alt="Cameră tehnică industrială executată de Instalații Termice Alex">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICE FILTER MODAL -->
-    <div class="service-filter-modal" id="serviceFilterModal" onclick="closeServiceFilterModal(event)">
-        <div class="service-filter-panel" onclick="event.stopPropagation()">
-            <button class="service-filter-close" onclick="closeServiceFilterModal(event)" aria-label="Închide categoriile de servicii"><i class="fas fa-times"></i></button>
-            <h3>Serviciile Noastre</h3>
-            <p>Alege o categorie pentru a vedea doar serviciile relevante.</p>
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">Toate</button>
-                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
-                <button class="filter-btn" data-filter="industrial">Industrial</button>
-                <button class="filter-btn" data-filter="hvac">HVAC</button>
-                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
-                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
-                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
-            </div>
-            <div class="services-grid" id="servicesGrid">
-                <div class="service-card" data-category="incalzire">
-                    <div class="service-icon"><i class="fas fa-fire-alt"></i></div>
-                    <h3>Montaj Centrale Termice</h3>
-                    <p>Instalare profesională de centrale termice pe gaz, electrică sau pe lemne, cu racordare completă la sistemul existent.</p>
-                    <span class="service-tag tag-incalzire">Încălzire</span>
-                </div>
-                <div class="service-card" data-category="industrial">
-                    <div class="service-icon"><i class="fas fa-industry"></i></div>
-                    <h3>Camere Tehnice Industriale</h3>
-                    <p>Montaj conducte, pompe de circulație, vane, filtre, manometre și echipamente pentru sisteme termice de capacitate mare.</p>
-                    <span class="service-tag tag-incalzire">Industrial</span>
-                </div>
-                <div class="service-card" data-category="incalzire">
-                    <div class="service-icon"><i class="fas fa-temperature-high"></i></div>
-                    <h3>Radiatoare & Pardoseală</h3>
-                    <p>Montaj radiatoare moderne și sisteme de încălzire în pardoseală pentru distribuție uniformă a căldurii.</p>
-                    <span class="service-tag tag-incalzire">Încălzire</span>
-                </div>
-                <div class="service-card" data-category="hvac">
-                    <div class="service-icon"><i class="fas fa-wind"></i></div>
-                    <h3>Climatizare & Pompe de Căldură</h3>
-                    <p>Instalare unități de aer condiționat, pompe de căldură, unități externe și trasee frigorifice pentru spații civile și comerciale.</p>
-                    <span class="service-tag tag-apa">HVAC</span>
-                </div>
-                <div class="service-card" data-category="apa">
-                    <div class="service-icon"><i class="fas fa-sun"></i></div>
-                    <h3>Boilere & Panouri Solare</h3>
-                    <p>Instalare boilere electrice, pe gaz și panouri solare pentru apă caldă menajeră eficientă și economică.</p>
-                    <span class="service-tag tag-apa">Apă Caldă</span>
-                </div>
-                <div class="service-card" data-category="sanitare">
-                    <div class="service-icon"><i class="fas fa-faucet"></i></div>
-                    <h3>Instalații Sanitare</h3>
-                    <p>Montaj complet de instalații sanitare: chiuvete, WC, cabine de duș, căzi și sisteme de evacuare.</p>
-                    <span class="service-tag tag-sanitare">Sanitare</span>
-                </div>
-                <div class="service-card" data-category="mentenanta">
-                    <div class="service-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Service & Revizii</h3>
-                    <p>Revizii periodice, curățare și întreținere pentru centrale termice și boilere pentru performanță maximă.</p>
-                    <span class="service-tag tag-mentenanta">Mentenanță</span>
-                </div>
-                <div class="service-card" data-category="mentenanta">
-                    <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                    <h3>Depanări Urgente</h3>
-                    <p>Intervenții rapide pentru avarii, scurgeri, probleme de presiune sau orice urgență în instalații.</p>
-                    <span class="service-tag tag-mentenanta">Mentenanță</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- PORTOFOLIU -->
     <section class="portfolio" id="portfolio">
@@ -1458,6 +1342,214 @@
                 <button class="portfolio-category-btn" data-portfolio-filter="canalizare"><i class="fas fa-water"></i> Canalizare</button>
             </div>
             <div class="portfolio-grid">
+                <div class="portfolio-item reveal" data-portfolio-category="incalzire-civila" onclick="openLightbox(66)">
+                    <video class="portfolio-video" src="assets/promovare.mp4" muted playsinline preload="metadata"></video>
+                    <div class="portfolio-overlay"><span>Video lucrari termice civile</span></div>
+                    <div class="portfolio-info">
+                        <h3>Prezentare Incalzire Civila</h3>
+                        <p>Prezentare video cu lucrari de instalatii termice civile, montaj echipamente si detalii de executie.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(67)">
+                    <img src="assets/clima-a-18.jpeg" alt="Casete HVAC in Constructie">
+                    <div class="portfolio-overlay"><span>Trasee si unitati casetate</span></div>
+                    <div class="portfolio-info">
+                        <h3>Casete HVAC in Constructie</h3>
+                        <p>Pregatire trasee frigorifice si electrice pentru unitati casetate de tavan, inainte de finisarea spatiului interior.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(68)">
+                    <img src="assets/clima-a-17.jpeg" alt="Caseta Tavan Hisense">
+                    <div class="portfolio-overlay"><span>Unitate casetata</span></div>
+                    <div class="portfolio-info">
+                        <h3>Caseta Tavan Hisense</h3>
+                        <p>Montaj unitate casetata de climatizare, cu racord condens si trasee frigorifice protejate pentru spatii comerciale.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(69)">
+                    <img src="assets/clima-a-16.jpeg" alt="Unitati Externe Samsung pe Acoperis">
+                    <div class="portfolio-overlay"><span>Rooftop rezidential</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitati Externe Samsung pe Acoperis</h3>
+                        <p>Instalare unitati externe Samsung pe acoperis, cu pozitionare pe suporti si pregatire pentru racordare frigorifica.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(70)">
+                    <img src="assets/clima-a-15.jpeg" alt="Unitati Externe Hyundai Rooftop">
+                    <div class="portfolio-overlay"><span>Trasee frigorifice izolate</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitati Externe Hyundai Rooftop</h3>
+                        <p>Montaj mai multe unitati externe Hyundai pe terasa tehnica, cu trasee frigorifice izolate si distributie organizata.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(71)">
+                    <img src="assets/clima-a-14.jpeg" alt="Racordare Unitate Interioara Comerciala">
+                    <div class="portfolio-overlay"><span>Racorduri si trasee</span></div>
+                    <div class="portfolio-info">
+                        <h3>Racordare Unitate Interioara Comerciala</h3>
+                        <p>Racordare trasee frigorifice, condens si cablaje la o unitate interioara pentru spatiu comercial.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(72)">
+                    <img src="assets/clima-a-13.jpeg" alt="Montaj Unitati Carrier Exterior">
+                    <div class="portfolio-overlay"><span>Suporti metalici</span></div>
+                    <div class="portfolio-info">
+                        <h3>Montaj Unitati Carrier Exterior</h3>
+                        <p>Instalare unitati externe Carrier pe suporti metalici, cu traseu frigorific si evacuare condens.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(73)">
+                    <img src="assets/clima-a-12.jpeg" alt="Unitate Consola Carrier">
+                    <div class="portfolio-overlay"><span>Climatizare comerciala</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitate Consola Carrier</h3>
+                        <p>Montaj unitate de climatizare tip consola, integrata pe structura metalica intr-un spatiu comercial.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(74)">
+                    <img src="assets/clima-a-11.jpeg" alt="Unitati Externe Samsung Suprapuse">
+                    <div class="portfolio-overlay"><span>Montaj compact</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitati Externe Samsung Suprapuse</h3>
+                        <p>Montaj compact pentru doua unitati externe Samsung, pe console metalice, cu trasee frigorifice izolate.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(75)">
+                    <img src="assets/clima-a-10.jpeg" alt="Service Unitate Externa">
+                    <div class="portfolio-overlay"><span>Verificare frigorifica</span></div>
+                    <div class="portfolio-info">
+                        <h3>Service Unitate Externa</h3>
+                        <p>Interventie tehnica la unitate externa de climatizare, verificare presiuni si racorduri frigorifice.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(76)">
+                    <img src="assets/clima-a-9.jpeg" alt="Racord Condens Unitate Interioara">
+                    <div class="portfolio-overlay"><span>Evacuare condens</span></div>
+                    <div class="portfolio-info">
+                        <h3>Racord Condens Unitate Interioara</h3>
+                        <p>Detaliu de racord pentru evacuarea condensului si conectarea traseului la unitatea interioara.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(77)">
+                    <img src="assets/clima-a-8.jpeg" alt="Montaj Split Samsung">
+                    <div class="portfolio-overlay"><span>Unitate interioara</span></div>
+                    <div class="portfolio-info">
+                        <h3>Montaj Split Samsung</h3>
+                        <p>Instalare aparat de aer conditionat Samsung, cu canal mascat pentru trasee si evacuare condens.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(78)">
+                    <img src="assets/clima-a-7.jpeg" alt="Unitati Externe Atlantic si Samsung">
+                    <div class="portfolio-overlay"><span>Terasa tehnica</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitati Externe Atlantic si Samsung</h3>
+                        <p>Instalare pompe de caldura si unitati externe pe terasa, cu pozitionare tehnica si racorduri pregatite.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(79)">
+                    <img src="assets/clima-a-6.jpeg" alt="Unitate Externa Romstal">
+                    <div class="portfolio-overlay"><span>Consola de perete</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitate Externa Romstal</h3>
+                        <p>Montaj unitate externa Romstal pe consola de perete, cu traseu frigorific si evacuare condens.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(80)">
+                    <img src="assets/clima-a-5.jpeg" alt="Montaj Split Hisense">
+                    <div class="portfolio-overlay"><span>Climatizare rezidentiala</span></div>
+                    <div class="portfolio-info">
+                        <h3>Montaj Split Hisense</h3>
+                        <p>Instalare unitate interioara Hisense pentru climatizare rezidentiala, cu trasee mascate si finisaj curat.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(81)">
+                    <img src="assets/clima-a-4.jpeg" alt="Unitati Externe Nordis">
+                    <div class="portfolio-overlay"><span>Montaj suprapus</span></div>
+                    <div class="portfolio-info">
+                        <h3>Unitati Externe Nordis</h3>
+                        <p>Montaj in consola pentru doua unitati externe Nordis, cu pozitionare suprapusa si trasee compacte.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(82)">
+                    <img src="assets/clima-a-3.jpeg" alt="Climatizare Fatada Locuinta">
+                    <div class="portfolio-overlay"><span>Mai multe unitati externe</span></div>
+                    <div class="portfolio-info">
+                        <h3>Climatizare Fatada Locuinta</h3>
+                        <p>Instalare unitati externe pe fatada, cu console metalice si trasee adaptate pentru mai multe camere.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(83)">
+                    <img src="assets/clima-a-2.jpeg" alt="Montaj Split Nordis">
+                    <div class="portfolio-overlay"><span>Unitate interioara</span></div>
+                    <div class="portfolio-info">
+                        <h3>Montaj Split Nordis</h3>
+                        <p>Instalare unitate interioara Nordis, cu pozitionare pe perete si racordare la traseu frigorific existent.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(84)">
+                    <img src="assets/clima-a-1.jpeg" alt="Montaj Split Haier">
+                    <div class="portfolio-overlay"><span>Traseu mascat</span></div>
+                    <div class="portfolio-info">
+                        <h3>Montaj Split Haier</h3>
+                        <p>Montaj unitate interioara Haier langa fereastra, cu traseu mascat si evacuare condens.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(85)">
+                    <img src="assets/canalizare-n-7.jpeg" alt="Traseu Canalizare Parcare">
+                    <div class="portfolio-overlay"><span>Colector principal</span></div>
+                    <div class="portfolio-info">
+                        <h3>Traseu Canalizare Parcare</h3>
+                        <p>Executie traseu principal de canalizare intr-o parcare subterana, cu conducte PEHD sudate si panta de scurgere controlata.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(86)">
+                    <img src="assets/canalizare-n-6.jpeg" alt="Coloana Canalizare Suspendata">
+                    <div class="portfolio-overlay"><span>Prinderi metalice</span></div>
+                    <div class="portfolio-info">
+                        <h3>Coloana Canalizare Suspendata</h3>
+                        <p>Montaj coloana si traseu suspendat de canalizare, cu prinderi metalice si racorduri pentru evacuare.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(87)">
+                    <img src="assets/canalizare-n-5.jpeg" alt="Racord Canalizare Mare Diametru">
+                    <div class="portfolio-overlay"><span>PEHD sudat</span></div>
+                    <div class="portfolio-info">
+                        <h3>Racord Canalizare Mare Diametru</h3>
+                        <p>Realizare racord canalizare de diametru mare, cu piesa de schimbare directie si conectare la colector principal.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(88)">
+                    <img src="assets/canalizare-n-4.jpeg" alt="Traseu Canalizare Sub Plafon">
+                    <div class="portfolio-overlay"><span>Conducta suspendata</span></div>
+                    <div class="portfolio-info">
+                        <h3>Traseu Canalizare Sub Plafon</h3>
+                        <p>Montaj conducta de canalizare suspendata sub plafon, cu coliere de fixare si ramificatii pregatite pentru racorduri.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(89)">
+                    <img src="assets/canalizare-n-3.jpeg" alt="Retea Canalizare Subsol">
+                    <div class="portfolio-overlay"><span>Ramificatii tehnice</span></div>
+                    <div class="portfolio-info">
+                        <h3>Retea Canalizare Subsol</h3>
+                        <p>Executie retea de canalizare in subsol tehnic, cu conducte PEHD si ramificatii pentru puncte de evacuare.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(90)">
+                    <img src="assets/canalizare-n-2.jpeg" alt="Ramificatie Canalizare Plafon">
+                    <div class="portfolio-overlay"><span>Coturi sudate</span></div>
+                    <div class="portfolio-info">
+                        <h3>Ramificatie Canalizare Plafon</h3>
+                        <p>Detaliu de ramificatie canalizare suspendata, cu coturi sudate si suporturi pentru traseu stabil.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal" data-portfolio-category="canalizare" onclick="openLightbox(91)">
+                    <img src="assets/canalizare-n-1.jpeg" alt="Canalizare Pardoseala Comerciala">
+                    <div class="portfolio-overlay"><span>Rigola si racorduri</span></div>
+                    <div class="portfolio-info">
+                        <h3>Canalizare Pardoseala Comerciala</h3>
+                        <p>Montaj trasee de canalizare la nivel de pardoseala pentru spatiu comercial, cu rigola si racorduri multiple.</p>
+                    </div>
+                </div>
                 <div class="portfolio-item reveal" data-portfolio-category="incalzire-industriala" onclick="openLightbox(0)">
                     <img src="assets/termic-20.jpg" alt="Grup de pompare pentru cameră tehnică">
                     <div class="portfolio-overlay">
@@ -1816,11 +1908,113 @@
         </div>
     </section>
 
+    <!-- DESPRE NOI -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="reveal">Cine <span>Suntem</span></h2>
+                    <p class="reveal reveal-delay-1">Instalații Termice Alex execută lucrări de montaj și modernizare pentru sisteme termice civile și industriale: case, apartamente, spații comerciale, hale și camere tehnice complexe.</p>
+                    <p class="reveal reveal-delay-2">Lucrăm cu atenție la trasee, îmbinări, echipamente și testare finală. Fiecare proiect este tratat tehnic, curat și transparent, de la evaluare până la predarea lucrării.</p>
+                    <div class="stats-row">
+                        <div class="stat-card reveal reveal-delay-1">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>13+</h4>
+                            <p>Ani Experiență</p>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-2">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>100+</h4>
+                            <p>Proiecte Finalizate</p>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-3">
+                            <i class="fas fa-award"></i>
+                            <h4>100%</h4>
+                            <p>Garanție Lucrări</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal reveal-delay-2">
+                    <img src="assets/termic-19.jpg" alt="Cameră tehnică industrială executată de Instalații Termice Alex">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE FILTER MODAL -->
+    <div class="service-filter-modal" id="serviceFilterModal" onclick="closeServiceFilterModal(event)">
+        <div class="service-filter-panel" onclick="event.stopPropagation()">
+            <button class="service-filter-close" onclick="closeServiceFilterModal(event)" aria-label="Închide categoriile de servicii"><i class="fas fa-times"></i></button>
+            <h3>Serviciile Noastre</h3>
+            <p>Alege o categorie pentru a vedea doar serviciile relevante.</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Toate</button>
+                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="hvac">HVAC</button>
+                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
+                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
+                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+                <div class="service-card" data-category="incalzire">
+                    <div class="service-icon"><i class="fas fa-fire-alt"></i></div>
+                    <h3>Montaj Centrale Termice</h3>
+                    <p>Instalare profesională de centrale termice pe gaz, electrică sau pe lemne, cu racordare completă la sistemul existent.</p>
+                    <span class="service-tag tag-incalzire">Încălzire</span>
+                </div>
+                <div class="service-card" data-category="industrial">
+                    <div class="service-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Camere Tehnice Industriale</h3>
+                    <p>Montaj conducte, pompe de circulație, vane, filtre, manometre și echipamente pentru sisteme termice de capacitate mare.</p>
+                    <span class="service-tag tag-incalzire">Industrial</span>
+                </div>
+                <div class="service-card" data-category="incalzire">
+                    <div class="service-icon"><i class="fas fa-temperature-high"></i></div>
+                    <h3>Radiatoare & Pardoseală</h3>
+                    <p>Montaj radiatoare moderne și sisteme de încălzire în pardoseală pentru distribuție uniformă a căldurii.</p>
+                    <span class="service-tag tag-incalzire">Încălzire</span>
+                </div>
+                <div class="service-card" data-category="hvac">
+                    <div class="service-icon"><i class="fas fa-wind"></i></div>
+                    <h3>Climatizare & Pompe de Căldură</h3>
+                    <p>Instalare unități de aer condiționat, pompe de căldură, unități externe și trasee frigorifice pentru spații civile și comerciale.</p>
+                    <span class="service-tag tag-apa">HVAC</span>
+                </div>
+                <div class="service-card" data-category="apa">
+                    <div class="service-icon"><i class="fas fa-sun"></i></div>
+                    <h3>Boilere & Panouri Solare</h3>
+                    <p>Instalare boilere electrice, pe gaz și panouri solare pentru apă caldă menajeră eficientă și economică.</p>
+                    <span class="service-tag tag-apa">Apă Caldă</span>
+                </div>
+                <div class="service-card" data-category="sanitare">
+                    <div class="service-icon"><i class="fas fa-faucet"></i></div>
+                    <h3>Instalații Sanitare</h3>
+                    <p>Montaj complet de instalații sanitare: chiuvete, WC, cabine de duș, căzi și sisteme de evacuare.</p>
+                    <span class="service-tag tag-sanitare">Sanitare</span>
+                </div>
+                <div class="service-card" data-category="mentenanta">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Service & Revizii</h3>
+                    <p>Revizii periodice, curățare și întreținere pentru centrale termice și boilere pentru performanță maximă.</p>
+                    <span class="service-tag tag-mentenanta">Mentenanță</span>
+                </div>
+                <div class="service-card" data-category="mentenanta">
+                    <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Depanări Urgente</h3>
+                    <p>Intervenții rapide pentru avarii, scurgeri, probleme de presiune sau orice urgență în instalații.</p>
+                    <span class="service-tag tag-mentenanta">Mentenanță</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <div class="lightbox-close" onclick="closeLightbox(event)"><i class="fas fa-times"></i></div>
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <img class="lightbox-img" id="lightboxImg" src="" alt="">
+                <video class="lightbox-img" id="lightboxVideo" controls playsinline style="display: none;"></video>
             <div class="lightbox-info">
                 <h3 id="lightboxTitle"></h3>
                 <p id="lightboxDesc"></p>
@@ -1975,7 +2169,7 @@
                     <span class="brand-name"><span class="brand-ice">Instalații</span> <span class="brand-fire">Termice Alex</span></span>
                 </div>
                 <div class="footer-links">
-                    <a href="#hero">Acasă</a>
+                    <a href="#portfolio">Acasă</a>
                     <a href="#about">Despre Noi</a>
                     <a href="#" onclick="openServiceFilterModal(event)">Servicii</a>
                     <a href="#portfolio">Portofoliu</a>
@@ -1983,7 +2177,7 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/plumbing.pipes.art" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/instalatii.termice.alex" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://wa.me/37379393417" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.instagram.com/instalatii_termice_alex?igsh=eXZka2h2bHJhaDZu" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="tel:+37379393417" title="Telefon"><i class="fas fa-phone"></i></a>
@@ -2204,13 +2398,55 @@
             { img: 'assets/anti-4.jpeg', title: 'Rețea Anti-Incendiu Suspendată', desc: 'Montaj conducte anti-incendiu suspendate, cu ramificații, coliere și aliniere pe structura parcării.' },
             { img: 'assets/anti-3.jpeg', title: 'Hidrant Interior Racordat', desc: 'Racordare hidrant interior la traseul anti-incendiu, cu conductă roșie, coliere și poziționare lângă cutia de intervenție.' },
             { img: 'assets/anti-2.jpeg', title: 'Grup Pompare Anti-Incendiu', desc: 'Montaj grup de pompare anti-incendiu cu rezervor, pompe, vane și conducte de distribuție.' },
-            { img: 'assets/anti-1.jpeg', title: 'Stație Pompare Anti-Incendiu', desc: 'Instalare stație de pompare anti-incendiu, cu pompe principale, vas de expansiune și racordare la rezervoare.' }
+            { img: 'assets/anti-1.jpeg', title: 'Statie Pompare Anti-Incendiu', desc: 'Instalare statie de pompare anti-incendiu, cu pompe principale, vas de expansiune si racordare la rezervoare.' },
+            { img: 'assets/promovare.mp4', type: 'video', title: 'Prezentare Incalzire Civila', desc: 'Prezentare video cu lucrari de instalatii termice civile, montaj echipamente si detalii de executie.' },
+            { img: 'assets/clima-a-18.jpeg', title: 'Casete HVAC in Constructie', desc: 'Pregatire trasee frigorifice si electrice pentru unitati casetate de tavan, inainte de finisarea spatiului interior.' },
+            { img: 'assets/clima-a-17.jpeg', title: 'Caseta Tavan Hisense', desc: 'Montaj unitate casetata de climatizare, cu racord condens si trasee frigorifice protejate pentru spatii comerciale.' },
+            { img: 'assets/clima-a-16.jpeg', title: 'Unitati Externe Samsung pe Acoperis', desc: 'Instalare unitati externe Samsung pe acoperis, cu pozitionare pe suporti si pregatire pentru racordare frigorifica.' },
+            { img: 'assets/clima-a-15.jpeg', title: 'Unitati Externe Hyundai Rooftop', desc: 'Montaj mai multe unitati externe Hyundai pe terasa tehnica, cu trasee frigorifice izolate si distributie organizata.' },
+            { img: 'assets/clima-a-14.jpeg', title: 'Racordare Unitate Interioara Comerciala', desc: 'Racordare trasee frigorifice, condens si cablaje la o unitate interioara pentru spatiu comercial.' },
+            { img: 'assets/clima-a-13.jpeg', title: 'Montaj Unitati Carrier Exterior', desc: 'Instalare unitati externe Carrier pe suporti metalici, cu traseu frigorific si evacuare condens.' },
+            { img: 'assets/clima-a-12.jpeg', title: 'Unitate Consola Carrier', desc: 'Montaj unitate de climatizare tip consola, integrata pe structura metalica intr-un spatiu comercial.' },
+            { img: 'assets/clima-a-11.jpeg', title: 'Unitati Externe Samsung Suprapuse', desc: 'Montaj compact pentru doua unitati externe Samsung, pe console metalice, cu trasee frigorifice izolate.' },
+            { img: 'assets/clima-a-10.jpeg', title: 'Service Unitate Externa', desc: 'Interventie tehnica la unitate externa de climatizare, verificare presiuni si racorduri frigorifice.' },
+            { img: 'assets/clima-a-9.jpeg', title: 'Racord Condens Unitate Interioara', desc: 'Detaliu de racord pentru evacuarea condensului si conectarea traseului la unitatea interioara.' },
+            { img: 'assets/clima-a-8.jpeg', title: 'Montaj Split Samsung', desc: 'Instalare aparat de aer conditionat Samsung, cu canal mascat pentru trasee si evacuare condens.' },
+            { img: 'assets/clima-a-7.jpeg', title: 'Unitati Externe Atlantic si Samsung', desc: 'Instalare pompe de caldura si unitati externe pe terasa, cu pozitionare tehnica si racorduri pregatite.' },
+            { img: 'assets/clima-a-6.jpeg', title: 'Unitate Externa Romstal', desc: 'Montaj unitate externa Romstal pe consola de perete, cu traseu frigorific si evacuare condens.' },
+            { img: 'assets/clima-a-5.jpeg', title: 'Montaj Split Hisense', desc: 'Instalare unitate interioara Hisense pentru climatizare rezidentiala, cu trasee mascate si finisaj curat.' },
+            { img: 'assets/clima-a-4.jpeg', title: 'Unitati Externe Nordis', desc: 'Montaj in consola pentru doua unitati externe Nordis, cu pozitionare suprapusa si trasee compacte.' },
+            { img: 'assets/clima-a-3.jpeg', title: 'Climatizare Fatada Locuinta', desc: 'Instalare unitati externe pe fatada, cu console metalice si trasee adaptate pentru mai multe camere.' },
+            { img: 'assets/clima-a-2.jpeg', title: 'Montaj Split Nordis', desc: 'Instalare unitate interioara Nordis, cu pozitionare pe perete si racordare la traseu frigorific existent.' },
+            { img: 'assets/clima-a-1.jpeg', title: 'Montaj Split Haier', desc: 'Montaj unitate interioara Haier langa fereastra, cu traseu mascat si evacuare condens.' },
+            { img: 'assets/canalizare-n-7.jpeg', title: 'Traseu Canalizare Parcare', desc: 'Executie traseu principal de canalizare intr-o parcare subterana, cu conducte PEHD sudate si panta de scurgere controlata.' },
+            { img: 'assets/canalizare-n-6.jpeg', title: 'Coloana Canalizare Suspendata', desc: 'Montaj coloana si traseu suspendat de canalizare, cu prinderi metalice si racorduri pentru evacuare.' },
+            { img: 'assets/canalizare-n-5.jpeg', title: 'Racord Canalizare Mare Diametru', desc: 'Realizare racord canalizare de diametru mare, cu piesa de schimbare directie si conectare la colector principal.' },
+            { img: 'assets/canalizare-n-4.jpeg', title: 'Traseu Canalizare Sub Plafon', desc: 'Montaj conducta de canalizare suspendata sub plafon, cu coliere de fixare si ramificatii pregatite pentru racorduri.' },
+            { img: 'assets/canalizare-n-3.jpeg', title: 'Retea Canalizare Subsol', desc: 'Executie retea de canalizare in subsol tehnic, cu conducte PEHD si ramificatii pentru puncte de evacuare.' },
+            { img: 'assets/canalizare-n-2.jpeg', title: 'Ramificatie Canalizare Plafon', desc: 'Detaliu de ramificatie canalizare suspendata, cu coturi sudate si suporturi pentru traseu stabil.' },
+            { img: 'assets/canalizare-n-1.jpeg', title: 'Canalizare Pardoseala Comerciala', desc: 'Montaj trasee de canalizare la nivel de pardoseala pentru spatiu comercial, cu rigola si racorduri multiple.' }
         ];
 
         function openLightbox(index) {
             const lightbox = document.getElementById('lightbox');
             const data = portfolioData[index];
-            document.getElementById('lightboxImg').src = data.img;
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+
+            if (data.type === 'video') {
+                lightboxImg.style.display = 'none';
+                lightboxImg.src = '';
+                lightboxVideo.src = data.img;
+                lightboxVideo.style.display = 'block';
+                lightboxVideo.load();
+            } else {
+                lightboxVideo.pause();
+                lightboxVideo.removeAttribute('src');
+                lightboxVideo.style.display = 'none';
+                lightboxImg.src = data.img;
+                lightboxImg.style.display = 'block';
+            }
+
             document.getElementById('lightboxTitle').textContent = data.title;
             document.getElementById('lightboxDesc').textContent = data.desc;
             lightbox.classList.add('active');
@@ -2219,6 +2455,9 @@
 
         function closeLightbox(event) {
             if (event.target.id === 'lightbox' || event.target.closest('.lightbox-close')) {
+                const lightboxVideo = document.getElementById('lightboxVideo');
+                lightboxVideo.pause();
+                lightboxVideo.removeAttribute('src');
                 document.getElementById('lightbox').classList.remove('active');
                 document.body.style.overflow = '';
             }
@@ -2226,6 +2465,9 @@
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
+                const lightboxVideo = document.getElementById('lightboxVideo');
+                lightboxVideo.pause();
+                lightboxVideo.removeAttribute('src');
                 document.getElementById('lightbox').classList.remove('active');
                 document.body.style.overflow = '';
             }
@@ -2233,3 +2475,5 @@
     </script>
 </body>
 </html>
+
+
