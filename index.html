@@ -457,8 +457,35 @@
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-bottom: 48px;
             flex-wrap: wrap;
+        }
+        .service-filter-launch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+        .filter-open-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 28px;
+            border: 2px solid rgba(120,203,230,0.55);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.92);
+            color: var(--ice-blue-dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .filter-open-btn:hover {
+            border-color: var(--orange-4);
+            color: var(--orange-4);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
         .filter-btn {
             padding: 10px 24px;
@@ -478,6 +505,71 @@
             border-color: var(--orange-4);
             box-shadow: var(--shadow-orange);
             transform: translateY(-2px);
+        }
+        .service-filter-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(17,24,39,0.62);
+            backdrop-filter: blur(9px);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        .service-filter-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .service-filter-panel {
+            width: min(100%, 620px);
+            background:
+                linear-gradient(90deg, rgba(23,109,140,0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.025) 1px, transparent 1px),
+                linear-gradient(180deg, #FFFFFF 0%, #EEF9FC 100%);
+            background-size: 52px 52px, 52px 52px, auto;
+            border: 1px solid rgba(120,203,230,0.42);
+            border-radius: 8px;
+            padding: 42px 24px 28px;
+            position: relative;
+            box-shadow: 0 28px 80px rgba(17,24,39,0.28);
+            transform: translateY(14px) scale(0.98);
+            transition: var(--transition);
+        }
+        .service-filter-modal.active .service-filter-panel {
+            transform: translateY(0) scale(1);
+        }
+        .service-filter-panel h3 {
+            color: var(--ice-blue-dark);
+            text-align: center;
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+        }
+        .service-filter-panel p {
+            color: var(--gray);
+            text-align: center;
+            margin: 0 auto 24px;
+        }
+        .service-filter-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--dark);
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .service-filter-close:hover {
+            background: var(--orange-4);
+            color: var(--white);
         }
         .services-grid {
             display: grid;
@@ -1190,7 +1282,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hero">Acasă</a></li>
                 <li><a href="#about">Despre Noi</a></li>
-                <li><a href="#services">Servicii</a></li>
+                <li><a href="#" onclick="openServiceFilterModal(event)">Servicii</a></li>
                 <li><a href="#portfolio">Portofoliu</a></li>
                 <li><a href="#" onclick="openFaqModal(event)">FAQ</a></li>
                 <li><a href="#contact" class="nav-cta">Cere Ofertă</a></li>
@@ -1266,15 +1358,6 @@
                 <h2>Serviciile <span>Noastre</span></h2>
                 <p>Servicii pentru locuințe, spații comerciale și obiective industriale: încălzire, sanitare, HVAC, camere tehnice și mentenanță.</p>
             </div>
-            <div class="filter-bar reveal reveal-delay-1">
-                <button class="filter-btn active" data-filter="all">Toate</button>
-                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
-                <button class="filter-btn" data-filter="industrial">Industrial</button>
-                <button class="filter-btn" data-filter="hvac">HVAC</button>
-                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
-                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
-                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
-            </div>
             <div class="services-grid" id="servicesGrid">
                 <div class="service-card" data-category="incalzire">
                     <div class="service-icon"><i class="fas fa-fire-alt"></i></div>
@@ -1327,6 +1410,24 @@
             </div>
         </div>
     </section>
+
+    <!-- SERVICE FILTER MODAL -->
+    <div class="service-filter-modal" id="serviceFilterModal" onclick="closeServiceFilterModal(event)">
+        <div class="service-filter-panel" onclick="event.stopPropagation()">
+            <button class="service-filter-close" onclick="closeServiceFilterModal(event)" aria-label="Închide categoriile de servicii"><i class="fas fa-times"></i></button>
+            <h3>Alege categoria de servicii</h3>
+            <p>Filtrează rapid serviciile afișate în pagină.</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Toate</button>
+                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="hvac">HVAC</button>
+                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
+                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
+                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
+            </div>
+        </div>
+    </div>
 
     <!-- PORTOFOLIU -->
     <section class="portfolio" id="portfolio">
@@ -1695,8 +1796,24 @@
                         card.classList.add('hidden');
                     }
                 });
+                closeServiceFilterModal();
+                document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
+
+        function openServiceFilterModal(event) {
+            if (event) event.preventDefault();
+            const serviceFilterModal = document.getElementById('serviceFilterModal');
+            serviceFilterModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeServiceFilterModal(event) {
+            if (event) event.preventDefault();
+            const serviceFilterModal = document.getElementById('serviceFilterModal');
+            serviceFilterModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
 
         // ===== FAQ ACCORDION =====
         function toggleFaq(button) {
@@ -1726,6 +1843,7 @@
 
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
+                closeServiceFilterModal(event);
                 closeFaqModal(event);
             }
         });
