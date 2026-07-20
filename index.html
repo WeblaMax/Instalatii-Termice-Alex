@@ -42,10 +42,12 @@
             font-family: 'Open Sans', sans-serif;
             color: var(--dark);
             background:
-                linear-gradient(90deg, rgba(49,169,212,0.035) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(49,169,212,0.028) 1px, transparent 1px),
-                #F7FAFC;
-            background-size: 48px 48px, 48px 48px, auto;
+                radial-gradient(circle at 12% 8%, rgba(77,191,226,0.16), transparent 28%),
+                radial-gradient(circle at 88% 18%, rgba(240,78,26,0.08), transparent 24%),
+                linear-gradient(90deg, rgba(23,109,140,0.07) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.052) 1px, transparent 1px),
+                linear-gradient(135deg, #F3FAFC 0%, #F8FBFC 42%, #FFFFFF 100%);
+            background-size: auto, auto, 56px 56px, 56px 56px, auto;
             line-height: 1.7;
             overflow-x: hidden;
             max-width: 100%;
@@ -199,9 +201,11 @@
             align-items: center;
             position: relative;
             background:
-                linear-gradient(120deg, rgba(49,169,212,0.16) 0%, rgba(255,255,255,0) 34%),
-                linear-gradient(300deg, rgba(240,78,26,0.11) 0%, rgba(255,255,255,0) 28%),
-                linear-gradient(135deg, #F7FAFC 0%, #EEF9FC 44%, #FFFFFF 100%);
+                radial-gradient(circle at 16% 24%, rgba(77,191,226,0.28), transparent 30%),
+                radial-gradient(circle at 82% 76%, rgba(240,78,26,0.12), transparent 28%),
+                linear-gradient(120deg, rgba(49,169,212,0.18) 0%, rgba(255,255,255,0) 34%),
+                linear-gradient(300deg, rgba(240,78,26,0.10) 0%, rgba(255,255,255,0) 28%),
+                linear-gradient(135deg, #EEF9FC 0%, #F8FCFD 46%, #FFFFFF 100%);
             overflow: hidden;
             padding-top: 80px;
         }
@@ -369,7 +373,10 @@
         /* DESPRE NOI */
         .about {
             background:
-                linear-gradient(180deg, #FFFFFF 0%, #F8FBFD 100%);
+                linear-gradient(90deg, rgba(23,109,140,0.045) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(244,250,252,0.96) 100%);
+            background-size: 58px 58px, 58px 58px, auto;
         }
         .about-grid {
             display: grid;
@@ -659,7 +666,11 @@
         /* PORTOFOLIU */
         .portfolio {
             background:
-                linear-gradient(180deg, #FFFFFF 0%, #F6F9FC 100%);
+                radial-gradient(circle at 86% 12%, rgba(77,191,226,0.15), transparent 26%),
+                linear-gradient(90deg, rgba(23,109,140,0.05) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.036) 1px, transparent 1px),
+                linear-gradient(180deg, #F9FCFD 0%, #EEF7FA 100%);
+            background-size: auto, 56px 56px, 56px 56px, auto;
         }
         .portfolio-grid {
             display: grid;
