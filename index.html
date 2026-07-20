@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalații Termice Alex | Soluții Complete Încălzire & Sanitare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --ice-blue-1: #EEF9FC;
+            --ice-blue-2: #D8F0F7;
+            --ice-blue-3: #B9E5F2;
+            --ice-blue-4: #78CBE6;
+            --ice-blue-5: #31A9D4;
+            --ice-blue-dark: #176D8C;
+            --orange-1: #FFF0E8;
+            --orange-2: #FFD4BF;
+            --orange-3: #FF7A2F;
+            --orange-4: #F04E1A;
+            --orange-5: #BD3211;
+            --dark: #161B2B;
+            --dark-light: #252C3F;
+            --white: #FFFFFF;
+            --gray: #5F6878;
+            --gray-light: #F5F7FA;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 16px 40px rgba(0,0,0,0.12);
+            --shadow-orange: 0 8px 24px rgba(255,107,0,0.25);
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background:
+                linear-gradient(90deg, rgba(49,169,212,0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(49,169,212,0.028) 1px, transparent 1px),
+                #F7FAFC;
+            background-size: 48px 48px, 48px 48px, auto;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-sm);
+            padding: 12px 0;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .navbar.scrolled .nav-logo { color: var(--dark); }
+        .nav-logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--orange-4);
+            box-shadow: 0 0 12px rgba(255,107,0,0.3);
+        }
+        .brand-name {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: baseline;
+            line-height: 1;
+        }
+        .brand-ice {
+            color: #4DBFE2;
+            text-shadow: 0 2px 10px rgba(23,109,140,0.32);
+        }
+        .brand-fire {
+            color: #F04E1A;
+            text-shadow: 0 2px 12px rgba(240,78,26,0.24);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--white);
+            transition: var(--transition);
+            position: relative;
+        }
+        .navbar.scrolled .nav-links a { color: var(--dark); }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--orange-4);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--orange-4); }
+        .nav-cta {
+            background: var(--orange-4);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600 !important;
+            box-shadow: var(--shadow-orange);
+            transition: var(--transition);
+        }
+        .nav-cta:hover {
+            background: var(--orange-5);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(255,107,0,0.35);
+        }
+        .nav-cta::after { display: none !important; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .navbar.scrolled .hamburger span { background: var(--dark); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(120deg, rgba(49,169,212,0.16) 0%, rgba(255,255,255,0) 34%),
+                linear-gradient(300deg, rgba(240,78,26,0.11) 0%, rgba(255,255,255,0) 28%),
+                linear-gradient(135deg, #F7FAFC 0%, #EEF9FC 44%, #FFFFFF 100%);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(90deg, rgba(23,109,140,0.045) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.035) 1px, transparent 1px),
+                linear-gradient(135deg, rgba(255,255,255,0.65), rgba(255,255,255,0));
+            background-size: 56px 56px, 56px 56px, auto;
+            pointer-events: none;
+        }
+        .hero-pipes {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--ice-blue-dark);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content h1 span {
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--gray);
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            color: var(--white);
+            box-shadow: var(--shadow-orange);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 36px rgba(255,107,0,0.4);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--ice-blue-dark);
+            border: 2px solid var(--ice-blue-4);
+        }
+        .btn-secondary:hover {
+            background: var(--ice-blue-1);
+            border-color: var(--ice-blue-5);
+            transform: translateY(-3px);
+        }
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-showcase {
+            width: min(100%, 430px);
+            aspect-ratio: 4 / 3;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(120,203,230,0.45);
+            box-shadow: 0 24px 70px rgba(22,27,43,0.18);
+            position: relative;
+        }
+        .hero-showcase img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .hero-badge {
+            position: absolute;
+            background: var(--white);
+            padding: 12px 20px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            animation: float-badge 3s ease-in-out infinite;
+        }
+        .hero-badge i { font-size: 1.3rem; color: var(--orange-4); }
+        .badge-1 { top: 10%; right: 0; animation-delay: 0s; }
+        .badge-2 { bottom: 15%; left: -10px; animation-delay: 1s; }
+        .badge-3 { top: 50%; right: -20px; animation-delay: 2s; }
+        @keyframes float-badge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* SECTIONS COMMON */
+        section { padding: 100px 0; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header h2 {
+            font-size: 2.4rem;
+            color: var(--ice-blue-dark);
+            margin-bottom: 12px;
+        }
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-header h2 span {
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* DESPRE NOI */
+        .about {
+            background:
+                linear-gradient(180deg, #FFFFFF 0%, #F8FBFD 100%);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: var(--ice-blue-dark);
+            margin-bottom: 20px;
+        }
+        .about-text h2 span {
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .about-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px; left: -20px;
+            width: 100%; height: 100%;
+            border: 3px solid var(--orange-4);
+            border-radius: 24px;
+            z-index: -1;
+        }
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, var(--ice-blue-1), var(--white));
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--ice-blue-2);
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--orange-3);
+        }
+        .stat-card i {
+            font-size: 2rem;
+            color: var(--orange-4);
+            margin-bottom: 12px;
+        }
+        .stat-card h4 {
+            font-size: 1.6rem;
+            color: var(--ice-blue-dark);
+            margin-bottom: 4px;
+        }
+        .stat-card p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        /* SERVICII */
+        .services {
+            background:
+                linear-gradient(90deg, rgba(23,109,140,0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.025) 1px, transparent 1px),
+                linear-gradient(180deg, #EEF9FC 0%, #FFFFFF 100%);
+            background-size: 52px 52px, 52px 52px, auto;
+        }
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 2px solid var(--ice-blue-3);
+            background: var(--white);
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            color: var(--white);
+            border-color: var(--orange-4);
+            box-shadow: var(--shadow-orange);
+            transform: translateY(-2px);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 36px 28px;
+            border: 1px solid var(--ice-blue-2);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--orange-4), var(--orange-3));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--orange-2);
+        }
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--ice-blue-1), var(--ice-blue-2));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            color: var(--orange-4);
+            transition: var(--transition);
+        }
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            color: var(--white);
+            transform: scale(1.1) rotate(-5deg);
+        }
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--ice-blue-dark);
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .service-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .tag-incalzire { background: var(--ice-blue-1); color: var(--ice-blue-dark); }
+        .tag-apa { background: var(--orange-1); color: var(--orange-5); }
+        .tag-sanitare { background: #E0F2FE; color: #0369A1; }
+        .tag-mentenanta { background: #FEF3C7; color: #92400E; }
+        .service-card.hidden { display: none; }
+        .service-card {
+            animation: cardFadeIn 0.5s ease forwards;
+        }
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PORTOFOLIU */
+        .portfolio {
+            background:
+                linear-gradient(180deg, #FFFFFF 0%, #F6F9FC 100%);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .portfolio-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .portfolio-caption {
+            padding: 20px;
+            background: var(--white);
+        }
+        .portfolio-caption h4 {
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+        .portfolio-caption p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+        .portfolio-item:hover img { transform: scale(1.08); }
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.2) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .portfolio-overlay h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .portfolio-overlay p {
+            color: var(--orange-3);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .portfolio-overlay .zoom-icon {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange-4);
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .portfolio-item:hover .zoom-icon { opacity: 1; }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox-content {
+            max-width: 900px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            animation: lightboxIn 0.3s ease;
+        }
+        @keyframes lightboxIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .lightbox-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .lightbox-info {
+            padding: 28px;
+        }
+        .lightbox-info h3 {
+            color: var(--ice-blue-dark);
+            margin-bottom: 8px;
+        }
+        .lightbox-info p { color: var(--gray); }
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 48px; height: 48px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        .lightbox-close:hover {
+            background: var(--orange-4);
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+
+        /* FAQ */
+        .faq {
+            background:
+                linear-gradient(90deg, rgba(240,78,26,0.025) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.03) 1px, transparent 1px),
+                linear-gradient(180deg, #FFFFFF 0%, #EEF9FC 100%);
+            background-size: 54px 54px, 54px 54px, auto;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            border: 1px solid var(--ice-blue-2);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-sm);
+            border-color: var(--ice-blue-3);
+        }
+        .faq-question {
+            width: 100%;
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--ice-blue-dark);
+            text-align: left;
+            transition: var(--transition);
+        }
+        .faq-question:hover { color: var(--orange-4); }
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--ice-blue-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange-4);
+            font-size: 0.85rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+            margin-left: 16px;
+        }
+        .faq-item.active .faq-icon {
+            background: var(--orange-4);
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 28px 24px;
+        }
+        .faq-answer p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+        .contact {
+            background:
+                linear-gradient(90deg, rgba(77,191,226,0.055) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(77,191,226,0.045) 1px, transparent 1px),
+                linear-gradient(135deg, #111827 0%, #182033 52%, #241B1A 100%);
+            background-size: 54px 54px, 54px 54px, auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 42%;
+            height: 100%;
+            background: repeating-linear-gradient(135deg, rgba(240,78,26,0.08) 0 1px, transparent 1px 18px);
+            opacity: 0.55;
+            pointer-events: none;
+        }
+        .contact::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 32%;
+            height: 100%;
+            background: repeating-linear-gradient(45deg, rgba(77,191,226,0.07) 0 1px, transparent 1px 20px);
+            opacity: 0.45;
+            pointer-events: none;
+        }
+        .contact .section-header h2 { color: var(--white); }
+        .contact .section-header p { color: var(--ice-blue-3); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .contact-item i {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .contact-item div h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .contact-item div p {
+            color: var(--ice-blue-3);
+            font-size: 0.95rem;
+        }
+        .whatsapp-cta {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            padding: 18px 32px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 16px;
+            box-shadow: 0 8px 24px rgba(37,211,102,0.3);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        .whatsapp-cta:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 36px rgba(37,211,102,0.4);
+        }
+        .whatsapp-cta i { font-size: 1.5rem; }
+        .contact-form {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 40px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            color: var(--ice-blue-3);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            color: var(--white);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange-4);
+            background: rgba(255,255,255,0.12);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--orange-4), var(--orange-3));
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-orange);
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(255,107,0,0.4);
+        }
+        /* FOOTER */
+        .footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+        .footer-brand img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .footer-links {
+            display: flex;
+            gap: 28px;
+        }
+        .footer-links a {
+            color: var(--ice-blue-3);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--orange-3); }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ice-blue-3);
+            transition: var(--transition);
+        }
+        .footer-social a:hover {
+            background: var(--orange-4);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            margin-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        /* FLOATING WHATSAPP */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.6rem;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+            z-index: 999;
+            transition: var(--transition);
+            animation: float-wa 3s ease-in-out infinite;
+        }
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(37,211,102,0.5);
+        }
+        @keyframes float-wa {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .hero-content h1 { font-size: 2.4rem; }
+            .hero-content p { margin: 0 auto 36px; }
+            .hero-buttons { justify-content: center; }
+            .hero-visual { order: -1; }
+            .hero-showcase { width: min(100%, 460px); }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { max-width: 500px; margin: 0 auto; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                gap: 24px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { color: var(--dark) !important; font-size: 1.1rem; }
+            .hamburger { display: flex; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .stats-row { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            section { padding: 60px 0; }
+            .section-header h2 { font-size: 1.8rem; }
+            .contact-form { padding: 28px; }
+            .footer-content { flex-direction: column; text-align: center; }
+            .lightbox-content { margin: 20px; }
+            .lightbox-img { height: 250px; }
+        }
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-showcase { aspect-ratio: 1 / 1; }
+            .filter-bar { gap: 8px; }
+            .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
+            .whatsapp-cta { font-size: 0.95rem; padding: 14px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/logo.jpg" alt="Instalații Termice Alex Logo">
+                <span class="brand-name"><span class="brand-ice">Instalații</span> <span class="brand-fire">Termice Alex</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Acasă</a></li>
+                <li><a href="#about">Despre Noi</a></li>
+                <li><a href="#services">Servicii</a></li>
+                <li><a href="#portfolio">Portofoliu</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta">Cere Ofertă</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-pipes"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="reveal">Soluții Complete în <span>Instalații Termice</span></h1>
+                <p class="reveal reveal-delay-1">Montaj sisteme termice civile și industriale, camere tehnice, centrale, pompe de căldură, climatizare și instalații sanitare. Execuție curată, precisă și durabilă.</p>
+                <div class="hero-buttons reveal reveal-delay-2">
+                    <a href="#services" class="btn btn-primary"><i class="fas fa-fire"></i> Vezi Serviciile</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> Contactează-ne</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal reveal-delay-1">
+                <div class="hero-showcase">
+                    <img src="assets/termic-19.jpg" alt="Cameră tehnică executată de Instalații Termice Alex">
+                </div>
+                <div class="hero-badge badge-1"><i class="fas fa-shield-alt"></i> Garanție Extinsă</div>
+                <div class="hero-badge badge-2"><i class="fas fa-clock"></i> Intervenție Rapidă</div>
+                <div class="hero-badge badge-3"><i class="fas fa-star"></i> 5★ Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESPRE NOI -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="reveal">Cine <span>Suntem</span></h2>
+                    <p class="reveal reveal-delay-1">Instalații Termice Alex execută lucrări de montaj și modernizare pentru sisteme termice civile și industriale: case, apartamente, spații comerciale, hale și camere tehnice complexe.</p>
+                    <p class="reveal reveal-delay-2">Lucrăm cu atenție la trasee, îmbinări, echipamente și testare finală. Fiecare proiect este tratat tehnic, curat și transparent, de la evaluare până la predarea lucrării.</p>
+                    <div class="stats-row">
+                        <div class="stat-card reveal reveal-delay-1">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h4>5+</h4>
+                            <p>Ani Experiență</p>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-2">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>100+</h4>
+                            <p>Proiecte Finalizate</p>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-3">
+                            <i class="fas fa-award"></i>
+                            <h4>100%</h4>
+                            <p>Garanție Lucrări</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal reveal-delay-2">
+                    <img src="assets/termic-19.jpg" alt="Cameră tehnică industrială executată de Instalații Termice Alex">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Serviciile <span>Noastre</span></h2>
+                <p>Servicii pentru locuințe, spații comerciale și obiective industriale: încălzire, sanitare, HVAC, camere tehnice și mentenanță.</p>
+            </div>
+            <div class="filter-bar reveal reveal-delay-1">
+                <button class="filter-btn active" data-filter="all">Toate</button>
+                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="hvac">HVAC</button>
+                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
+                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
+                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
+            </div>
+            <div class="services-grid" id="servicesGrid">
+                <div class="service-card" data-category="incalzire">
+                    <div class="service-icon"><i class="fas fa-fire-alt"></i></div>
+                    <h3>Montaj Centrale Termice</h3>
+                    <p>Instalare profesională de centrale termice pe gaz, electrică sau pe lemne, cu racordare completă la sistemul existent.</p>
+                    <span class="service-tag tag-incalzire">Încălzire</span>
+                </div>
+                <div class="service-card" data-category="industrial">
+                    <div class="service-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Camere Tehnice Industriale</h3>
+                    <p>Montaj conducte, pompe de circulație, vane, filtre, manometre și echipamente pentru sisteme termice de capacitate mare.</p>
+                    <span class="service-tag tag-incalzire">Industrial</span>
+                </div>
+                <div class="service-card" data-category="incalzire">
+                    <div class="service-icon"><i class="fas fa-temperature-high"></i></div>
+                    <h3>Radiatoare & Pardoseală</h3>
+                    <p>Montaj radiatoare moderne și sisteme de încălzire în pardoseală pentru distribuție uniformă a căldurii.</p>
+                    <span class="service-tag tag-incalzire">Încălzire</span>
+                </div>
+                <div class="service-card" data-category="hvac">
+                    <div class="service-icon"><i class="fas fa-wind"></i></div>
+                    <h3>Climatizare & Pompe de Căldură</h3>
+                    <p>Instalare unități de aer condiționat, pompe de căldură, unități externe și trasee frigorifice pentru spații civile și comerciale.</p>
+                    <span class="service-tag tag-apa">HVAC</span>
+                </div>
+                <div class="service-card" data-category="apa">
+                    <div class="service-icon"><i class="fas fa-sun"></i></div>
+                    <h3>Boilere & Panouri Solare</h3>
+                    <p>Instalare boilere electrice, pe gaz și panouri solare pentru apă caldă menajeră eficientă și economică.</p>
+                    <span class="service-tag tag-apa">Apă Caldă</span>
+                </div>
+                <div class="service-card" data-category="sanitare">
+                    <div class="service-icon"><i class="fas fa-faucet"></i></div>
+                    <h3>Instalații Sanitare</h3>
+                    <p>Montaj complet de instalații sanitare: chiuvete, WC, cabine de duș, căzi și sisteme de evacuare.</p>
+                    <span class="service-tag tag-sanitare">Sanitare</span>
+                </div>
+                <div class="service-card" data-category="mentenanta">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Service & Revizii</h3>
+                    <p>Revizii periodice, curățare și întreținere pentru centrale termice și boilere pentru performanță maximă.</p>
+                    <span class="service-tag tag-mentenanta">Mentenanță</span>
+                </div>
+                <div class="service-card" data-category="mentenanta">
+                    <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Depanări Urgente</h3>
+                    <p>Intervenții rapide pentru avarii, scurgeri, probleme de presiune sau orice urgență în instalații.</p>
+                    <span class="service-tag tag-mentenanta">Mentenanță</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTOFOLIU -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Proiectele <span>Noastre</span></h2>
+                <p>Câteva dintre lucrările finalizate cu succes pentru clienții noștri.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal" onclick="openLightbox(0)">
+                    <img src="assets/termic-20.jpg" alt="Grup de pompare pentru cameră tehnică">
+                    <div class="portfolio-overlay">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4>Grup de Pompare Industrial</h4>
+                        <p>Pompe, vane și racorduri flanșate</p>
+                    </div>
+                    <div class="portfolio-caption"><h4>Grup de Pompare Industrial</h4><p>Montaj pompe de circulație, vane de control și racorduri flanșate pentru distribuția agentului termic într-o cameră tehnică.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(1)">
+                    <img src="assets/termic-19.jpg" alt="Cameră tehnică industrială cu conducte roșii">
+                    <div class="portfolio-overlay">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4>Cameră Tehnică Complexă</h4>
+                        <p>Conducte, pompe și armături industriale</p>
+                    </div>
+                    <div class="portfolio-caption"><h4>Cameră Tehnică Complexă</h4><p>Execuție sistem de distribuție termică cu conducte industriale, pompe Grundfos, manometre, robineți și suporturi metalice.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" onclick="openLightbox(2)">
+                    <img src="assets/termic-18.jpg" alt="Sistem tehnic cu boiler și pompe">
+                    <div class="portfolio-overlay">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4>Boiler & Tratare Apă</h4>
+                        <p>Echipare cameră tehnică civilă</p>
+                    </div>
+                    <div class="portfolio-caption"><h4>Boiler & Tratare Apă</h4><p>Racordare boiler, vas de expansiune, filtre, pompe și trasee pentru apă caldă menajeră într-un spațiu tehnic rezidențial.</p></div>
+                </div>
+                <div class="portfolio-item reveal" onclick="openLightbox(3)">
+                    <img src="assets/termic-17.jpg" alt="Baterie de centrale termice și distribuitoare">
+                    <div class="portfolio-overlay">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4>Baterie Centrale Termice</h4>
+                        <p>Sistem cascadă cu distribuitoare</p>
+                    </div>
+                    <div class="portfolio-caption"><h4>Baterie Centrale Termice</h4><p>Montaj mai multe centrale în cascadă, colectoare, pompe și circuite separate pentru încălzirea unei clădiri cu consum ridicat.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(4)">
+                    <img src="assets/termic-16.jpg" alt="Centrală, boiler și vas tampon într-o baie tehnică">
+                    <div class="portfolio-overlay">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4>Sistem Termic Compact</h4>
+                        <p>Centrală, boiler și vas tampon</p>
+                    </div>
+                    <div class="portfolio-caption"><h4>Sistem Termic Compact</h4><p>Instalare centrală, boiler, vas tampon, vas de expansiune și automatizări într-un spațiu tehnic finisat.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" onclick="openLightbox(5)">
+                    <img src="assets/termic-15.jpg" alt="Distribuitor PPR cu robineți">
+                    <div class="portfolio-overlay">
+                        <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                        <h4>Distribuitor PPR</h4>
+                        <p>Colector cu robineți pe circuite</p>
+                    </div>
+                    <div class="portfolio-caption"><h4>Distribuitor PPR</h4><p>Asamblare distribuitor pentru circuite multiple, cu robineți de separare și racorduri pregătite pentru conectarea traseelor.</p></div>
+                </div>
+                <div class="portfolio-item reveal" onclick="openLightbox(6)">
+                    <img src="assets/termic-14.jpg" alt="Trasee suspendate pe șantier industrial">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Trasee Industriale Suspendate</h4><p>Montaj la înălțime în spațiu comercial</p></div>
+                    <div class="portfolio-caption"><h4>Trasee Industriale Suspendate</h4><p>Montaj conducte suspendate pentru sistem termic/HVAC într-o clădire industrială, cu lucru la înălțime și aliniere tehnică.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(7)">
+                    <img src="assets/termic-13.jpg" alt="Conducte roșii prin planșeu">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Trasee prin Planșeu</h4><p>Conducte industriale protejate</p></div>
+                    <div class="portfolio-caption"><h4>Trasee prin Planșeu</h4><p>Execuție trasee de conducte prin planșeu, cu schimbări de direcție și prinderi pe plafon pentru instalații tehnice.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" onclick="openLightbox(8)">
+                    <img src="assets/termic-12.jpg" alt="Trasee sanitare și distribuitor în baie">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Instalație Sanitară Îngropată</h4><p>Baie în construcție</p></div>
+                    <div class="portfolio-caption"><h4>Instalație Sanitară Îngropată</h4><p>Poziționare trasee apă rece/caldă, scurgere și distribuitor pentru baie, pregătite pentru tencuire și finisare.</p></div>
+                </div>
+                <div class="portfolio-item reveal" onclick="openLightbox(9)">
+                    <img src="assets/termic-11.jpg" alt="Aer condiționat Hisense montat">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Montaj Aer Condiționat</h4><p>Unitate interioară Hisense</p></div>
+                    <div class="portfolio-caption"><h4>Montaj Aer Condiționat</h4><p>Instalare unitate interioară de climatizare, racordare traseu frigorific și verificare funcționare după punere în lucru.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(10)">
+                    <img src="assets/termic-10.jpg" alt="Cutie distribuitor încălzire">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Distribuitor Încălzire</h4><p>Colector încastrat</p></div>
+                    <div class="portfolio-caption"><h4>Distribuitor Încălzire</h4><p>Montaj colector pentru circuite de încălzire, cu robineți de reglaj și separare pentru fiecare zonă.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" onclick="openLightbox(11)">
+                    <img src="assets/termic-9.jpg" alt="Trasee în pardoseală pentru baie">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Trasee Apă în Pardoseală</h4><p>Pregătire baie nouă</p></div>
+                    <div class="portfolio-caption"><h4>Trasee Apă în Pardoseală</h4><p>Distribuție apă rece/caldă și canalizare prin pardoseală, cu trasee protejate și pregătite pentru șapă.</p></div>
+                </div>
+                <div class="portfolio-item reveal" onclick="openLightbox(12)">
+                    <img src="assets/termic-8.jpg" alt="Racordare centrală termică">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Racordare Centrală</h4><p>Gaz, apă și condens</p></div>
+                    <div class="portfolio-caption"><h4>Racordare Centrală</h4><p>Conectare centrală termică la alimentare, retur, evacuare condens și gaz, cu robineți și elemente de siguranță.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(13)">
+                    <img src="assets/termic-7.jpg" alt="Centrală termică montată în mobilier">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Centrală Integrată în Mobilier</h4><p>Montaj rezidențial compact</p></div>
+                    <div class="portfolio-caption"><h4>Centrală Integrată în Mobilier</h4><p>Montaj centrală termică într-un spațiu îngust, cu racorduri ascunse și acces pentru service.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" onclick="openLightbox(14)">
+                    <img src="assets/termic-6.jpg" alt="Cabină de duș montată">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Montaj Cabină de Duș</h4><p>Instalație sanitară finalizată</p></div>
+                    <div class="portfolio-caption"><h4>Montaj Cabină de Duș</h4><p>Instalare cabină de duș, racordare la apă și scurgere, cu verificare etanșeitate și funcționare.</p></div>
+                </div>
+                <div class="portfolio-item reveal" onclick="openLightbox(15)">
+                    <img src="assets/termic-5.jpg" alt="Racorduri sub centrală termică">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Racorduri Sub Centrală</h4><p>Trasee termice și sanitare</p></div>
+                    <div class="portfolio-caption"><h4>Racorduri Sub Centrală</h4><p>Execuție racorduri sub centrală, conectare tur-retur, apă rece/caldă și trasee auxiliare într-o baie tehnică.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(16)">
+                    <img src="assets/termic-4.jpg" alt="Unitate exterioară pompă de căldură Hyundai">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Pompă de Căldură Hyundai</h4><p>Unitate externă montată pe suport</p></div>
+                    <div class="portfolio-caption"><h4>Pompă de Căldură Hyundai</h4><p>Montaj unitate exterioară pentru pompă de căldură, cu suport metalic, trasee protejate și pregătire pentru punere în funcțiune.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-2" onclick="openLightbox(17)">
+                    <img src="assets/termic-3.jpg" alt="Unități externe HVAC pe acoperiș">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>HVAC pe Acoperiș</h4><p>Mai multe unități externe</p></div>
+                    <div class="portfolio-caption"><h4>HVAC pe Acoperiș</h4><p>Instalare și poziționare unități externe pentru climatizare comercială, cu trasee frigorifice și suporturi dedicate.</p></div>
+                </div>
+                <div class="portfolio-item reveal" onclick="openLightbox(18)">
+                    <img src="assets/termic-2.jpg" alt="Cameră tehnică cu boiler Vaillant">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Cameră Tehnică Rezidențială</h4><p>Boiler, pompe și filtre</p></div>
+                    <div class="portfolio-caption"><h4>Cameră Tehnică Rezidențială</h4><p>Racordare boiler Vaillant, pompe, filtre și conducte pentru încălzire și apă caldă într-o locuință.</p></div>
+                </div>
+                <div class="portfolio-item reveal reveal-delay-1" onclick="openLightbox(19)">
+                    <img src="assets/termic-1.jpg" alt="Unități externe pe acoperiș">
+                    <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Unități Externe pe Acoperiș</h4><p>Climatizare comercială</p></div>
+                    <div class="portfolio-caption"><h4>Unități Externe pe Acoperiș</h4><p>Montaj unități externe pe terasă tehnică, cu trasee frigorifice ordonate și fixare pe suporturi metalice.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-close" onclick="closeLightbox(event)"><i class="fas fa-times"></i></div>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Întrebări <span>Frecvente</span></h2>
+                <p>Răspunsuri la cele mai comune întrebări ale clienților noștri.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Cât durează montajul unei centrale termice?
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Durata montajului unei centrale termice variază în funcție de complexitate. Pentru un apartament standard, lucrarea durează între 4-6 ore. Pentru case sau sisteme mai complexe, poate dura 1-2 zile. Oferim întotdeauna o estimare exactă după evaluarea locației.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Oferiți garanție pentru lucrări?
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da, oferim garanție extinsă pentru toate lucrările efectuate. Garanția acoperă atât manopera (24 de luni), cât și materialele utilizate, în funcție de specificațiile producătorului. Orice problemă apărută în perioada de garanție este rezolvată gratuit și prompt.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Lucrați și în weekend?
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da, suntem disponibili și în weekend pentru programări. Pentru intervenții de urgență (avarii, scurgeri majore), oferim serviciu 24/7, inclusiv în zilele de sărbătoare. Contactează-ne pe WhatsApp și îți vom confirma disponibilitatea în cel mai scurt timp.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Cum pot obține o estimare de preț?
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Poți obține o estimare gratuită contactându-ne pe WhatsApp sau telefonic. Pentru o ofertă exactă, preferăm să efectuăm o vizită la fața locului pentru a evalua situația. Evaluarea este gratuită și fără obligații. Trimite-ne detalii despre proiectul tău și îți răspundem în câteva ore.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-4">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Ce mărci de echipamente recomandați?
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Colaborăm cu producători de top precum Viessmann, Bosch, Vaillant, Ariston și alții. Recomandarea exactă depinde de bugetul tău, dimensiunea spațiului și necesitățile specifice. Îți oferim consultanță gratuită pentru a alege echipamentul optim raport calitate-preț.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-5">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Cât de des trebuie făcută revizia centralei?
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Revizia centralei termice se recomandă o dată pe an, ideal înainte de sezonul rece. O revizie regulată prelungește viața echipamentului, menține eficiența energetică și previne defecțiuni costisitoare. Oferim pachete de mentenanță anuală la prețuri avantajoase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Hai să <span>Vorbim</span></h2>
+                <p>Suntem aici să te ajutăm cu orice proiect de instalații. Contactează-ne acum!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Informații Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+373 79 393 417</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@instalatii-termice-alex.md</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Zonă de Acoperire</h4>
+                            <p>Chișinău și împrejurimi, Republica Moldova</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Program de Lucru</h4>
+                            <p>Luni - Sâmbătă: 08:00 - 20:00<br>Duminică: Programări</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/37379393417?text=Bună,%20sunt%20interesat%20de%20serviciile%20voastre%20de%20instalații%20termice.%20Aș%20dori%20o%20ofertă." target="_blank" class="whatsapp-cta">
+                        <i class="fab fa-whatsapp"></i>
+                        Scrie-ne pe WhatsApp
+                    </a>
+                </div>
+                <div class="contact-form reveal reveal-delay-1">
+                    <form onsubmit="event.preventDefault(); alert('Mulțumim pentru mesaj! Te contactăm în cel mai scurt timp.');">
+                        <div class="form-group">
+                            <label for="name">Numele tău</label>
+                            <input type="text" id="name" placeholder="Ex: Ion Popescu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" placeholder="Ex: +373 79 123 456" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesaj</label>
+                            <textarea id="message" placeholder="Descrie-ne proiectul tău..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Trimite Mesaj</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.jpg" alt="Logo Instalații Termice Alex">
+                    <span class="brand-name"><span class="brand-ice">Instalații</span> <span class="brand-fire">Termice Alex</span></span>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Acasă</a>
+                    <a href="#about">Despre Noi</a>
+                    <a href="#services">Servicii</a>
+                    <a href="#portfolio">Portofoliu</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/plumbing.pipes.art" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/37379393417" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="tel:+37379393417" title="Telefon"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Instalații Termice Alex. Toate drepturile rezervate. | Instalații cu Precizie, Căldură cu Pasiune</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/37379393417?text=Bună,%20sunt%20interesat%20de%20serviciile%20voastre%20de%20instalații%20termice.%20Aș%20dori%20o%20ofertă." target="_blank" class="float-whatsapp" title="Scrie-ne pe WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ===== HAMBURGER MENU =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ===== SCROLL REVEAL =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== SERVICE FILTER =====
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                serviceCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden');
+                        card.style.animation = 'none';
+                        card.offsetHeight; // trigger reflow
+                        card.style.animation = 'cardFadeIn 0.5s ease forwards';
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // ===== FAQ ACCORDION =====
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // ===== LIGHTBOX =====
+        const portfolioData = [
+            { img: 'assets/termic-20.jpg', title: 'Grup de Pompare Industrial', desc: 'Montaj pompe de circulație, vane de control și racorduri flanșate pentru distribuția agentului termic într-o cameră tehnică.' },
+            { img: 'assets/termic-19.jpg', title: 'Cameră Tehnică Complexă', desc: 'Execuție sistem de distribuție termică cu conducte industriale, pompe Grundfos, manometre, robineți și suporturi metalice.' },
+            { img: 'assets/termic-18.jpg', title: 'Boiler & Tratare Apă', desc: 'Racordare boiler, vas de expansiune, filtre, pompe și trasee pentru apă caldă menajeră într-un spațiu tehnic rezidențial.' },
+            { img: 'assets/termic-17.jpg', title: 'Baterie Centrale Termice', desc: 'Montaj mai multe centrale în cascadă, colectoare, pompe și circuite separate pentru încălzirea unei clădiri cu consum ridicat.' },
+            { img: 'assets/termic-16.jpg', title: 'Sistem Termic Compact', desc: 'Instalare centrală, boiler, vas tampon, vas de expansiune și automatizări într-un spațiu tehnic finisat.' },
+            { img: 'assets/termic-15.jpg', title: 'Distribuitor PPR', desc: 'Asamblare distribuitor pentru circuite multiple, cu robineți de separare și racorduri pregătite pentru conectarea traseelor.' },
+            { img: 'assets/termic-14.jpg', title: 'Trasee Industriale Suspendate', desc: 'Montaj conducte suspendate pentru sistem termic/HVAC într-o clădire industrială, cu lucru la înălțime și aliniere tehnică.' },
+            { img: 'assets/termic-13.jpg', title: 'Trasee prin Planșeu', desc: 'Execuție trasee de conducte prin planșeu, cu schimbări de direcție și prinderi pe plafon pentru instalații tehnice.' },
+            { img: 'assets/termic-12.jpg', title: 'Instalație Sanitară Îngropată', desc: 'Poziționare trasee apă rece/caldă, scurgere și distribuitor pentru baie, pregătite pentru tencuire și finisare.' },
+            { img: 'assets/termic-11.jpg', title: 'Montaj Aer Condiționat', desc: 'Instalare unitate interioară de climatizare, racordare traseu frigorific și verificare funcționare după punere în lucru.' },
+            { img: 'assets/termic-10.jpg', title: 'Distribuitor Încălzire', desc: 'Montaj colector pentru circuite de încălzire, cu robineți de reglaj și separare pentru fiecare zonă.' },
+            { img: 'assets/termic-9.jpg', title: 'Trasee Apă în Pardoseală', desc: 'Distribuție apă rece/caldă și canalizare prin pardoseală, cu trasee protejate și pregătite pentru șapă.' },
+            { img: 'assets/termic-8.jpg', title: 'Racordare Centrală', desc: 'Conectare centrală termică la alimentare, retur, evacuare condens și gaz, cu robineți și elemente de siguranță.' },
+            { img: 'assets/termic-7.jpg', title: 'Centrală Integrată în Mobilier', desc: 'Montaj centrală termică într-un spațiu îngust, cu racorduri ascunse și acces pentru service.' },
+            { img: 'assets/termic-6.jpg', title: 'Montaj Cabină de Duș', desc: 'Instalare cabină de duș, racordare la apă și scurgere, cu verificare etanșeitate și funcționare.' },
+            { img: 'assets/termic-5.jpg', title: 'Racorduri Sub Centrală', desc: 'Execuție racorduri sub centrală, conectare tur-retur, apă rece/caldă și trasee auxiliare într-o baie tehnică.' },
+            { img: 'assets/termic-4.jpg', title: 'Pompă de Căldură Hyundai', desc: 'Montaj unitate exterioară pentru pompă de căldură, cu suport metalic, trasee protejate și pregătire pentru punere în funcțiune.' },
+            { img: 'assets/termic-3.jpg', title: 'HVAC pe Acoperiș', desc: 'Instalare și poziționare unități externe pentru climatizare comercială, cu trasee frigorifice și suporturi dedicate.' },
+            { img: 'assets/termic-2.jpg', title: 'Cameră Tehnică Rezidențială', desc: 'Racordare boiler Vaillant, pompe, filtre și conducte pentru încălzire și apă caldă într-o locuință.' },
+            { img: 'assets/termic-1.jpg', title: 'Unități Externe pe Acoperiș', desc: 'Montaj unități externe pe terasă tehnică, cu trasee frigorifice ordonate și fixare pe suporturi metalice.' }
+        ];
+
+        function openLightbox(index) {
+            const lightbox = document.getElementById('lightbox');
+            const data = portfolioData[index];
+            document.getElementById('lightboxImg').src = data.img;
+            document.getElementById('lightboxTitle').textContent = data.title;
+            document.getElementById('lightboxDesc').textContent = data.desc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox' || event.target.closest('.lightbox-close')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
