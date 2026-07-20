@@ -655,8 +655,11 @@
             color: #4DBFE2;
             font-size: 1.45rem;
         }
-        .portfolio-category-btn[data-portfolio-filter="incalzire"] i,
-        .portfolio-category-btn[data-portfolio-filter="sanitare"] i {
+        .portfolio-category-btn[data-portfolio-filter="incalzire-civila"] i,
+        .portfolio-category-btn[data-portfolio-filter="incalzire-industriala"] i,
+        .portfolio-category-btn[data-portfolio-filter="anti-incendiu"] i,
+        .portfolio-category-btn[data-portfolio-filter="sanitare"] i,
+        .portfolio-category-btn[data-portfolio-filter="canalizare"] i {
             color: #F58B2F;
         }
         .portfolio-category-btn:hover,
@@ -1440,16 +1443,20 @@
                 <p>Câteva dintre lucrările finalizate cu succes pentru clienții noștri.</p>
             </div>
             <div class="portfolio-category-bar reveal reveal-delay-1">
-                <button class="portfolio-category-btn active" data-portfolio-filter="incalzire"><i class="fas fa-temperature-high"></i> Încălzire</button>
+                <button class="portfolio-category-btn active" data-portfolio-filter="incalzire-civila"><i class="fas fa-house-fire"></i> Încălzire Civilă</button>
+                <span class="portfolio-category-dot"></span>
+                <button class="portfolio-category-btn" data-portfolio-filter="incalzire-industriala"><i class="fas fa-industry"></i> Încălzire Industrială</button>
+                <span class="portfolio-category-dot"></span>
+                <button class="portfolio-category-btn" data-portfolio-filter="anti-incendiu"><i class="fas fa-fire-extinguisher"></i> Anti-Incendiu</button>
                 <span class="portfolio-category-dot"></span>
                 <button class="portfolio-category-btn" data-portfolio-filter="climatizare"><i class="fas fa-snowflake"></i> Climatizare</button>
                 <span class="portfolio-category-dot"></span>
-                <button class="portfolio-category-btn" data-portfolio-filter="ventilare"><i class="fas fa-fan"></i> Ventilare</button>
-                <span class="portfolio-category-dot"></span>
                 <button class="portfolio-category-btn" data-portfolio-filter="sanitare"><i class="fas fa-faucet"></i> Sanitare</button>
+                <span class="portfolio-category-dot"></span>
+                <button class="portfolio-category-btn" data-portfolio-filter="canalizare"><i class="fas fa-water"></i> Canalizare</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item reveal" data-portfolio-category="incalzire" onclick="openLightbox(0)">
+                <div class="portfolio-item reveal" data-portfolio-category="incalzire-industriala" onclick="openLightbox(0)">
                     <img src="assets/termic-20.jpg" alt="Grup de pompare pentru cameră tehnică">
                     <div class="portfolio-overlay">
                         <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
@@ -1458,7 +1465,7 @@
                     </div>
                     <div class="portfolio-caption"><h4>Grup de Pompare Industrial</h4><p>Montaj pompe de circulație, vane de control și racorduri flanșate pentru distribuția agentului termic într-o cameră tehnică.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire" onclick="openLightbox(1)">
+                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire-industriala" onclick="openLightbox(1)">
                     <img src="assets/termic-19.jpg" alt="Cameră tehnică industrială cu conducte roșii">
                     <div class="portfolio-overlay">
                         <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
@@ -1467,7 +1474,7 @@
                     </div>
                     <div class="portfolio-caption"><h4>Cameră Tehnică Complexă</h4><p>Execuție sistem de distribuție termică cu conducte industriale, pompe Grundfos, manometre, robineți și suporturi metalice.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="incalzire" onclick="openLightbox(2)">
+                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="incalzire-civila" onclick="openLightbox(2)">
                     <img src="assets/termic-18.jpg" alt="Sistem tehnic cu boiler și pompe">
                     <div class="portfolio-overlay">
                         <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
@@ -1476,7 +1483,7 @@
                     </div>
                     <div class="portfolio-caption"><h4>Boiler & Tratare Apă</h4><p>Racordare boiler, vas de expansiune, filtre, pompe și trasee pentru apă caldă menajeră într-un spațiu tehnic rezidențial.</p></div>
                 </div>
-                <div class="portfolio-item reveal" data-portfolio-category="incalzire" onclick="openLightbox(3)">
+                <div class="portfolio-item reveal" data-portfolio-category="incalzire-industriala" onclick="openLightbox(3)">
                     <img src="assets/termic-17.jpg" alt="Baterie de centrale termice și distribuitoare">
                     <div class="portfolio-overlay">
                         <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
@@ -1485,7 +1492,7 @@
                     </div>
                     <div class="portfolio-caption"><h4>Baterie Centrale Termice</h4><p>Montaj mai multe centrale în cascadă, colectoare, pompe și circuite separate pentru încălzirea unei clădiri cu consum ridicat.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire" onclick="openLightbox(4)">
+                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire-civila" onclick="openLightbox(4)">
                     <img src="assets/termic-16.jpg" alt="Centrală, boiler și vas tampon într-o baie tehnică">
                     <div class="portfolio-overlay">
                         <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
@@ -1494,7 +1501,7 @@
                     </div>
                     <div class="portfolio-caption"><h4>Sistem Termic Compact</h4><p>Instalare centrală, boiler, vas tampon, vas de expansiune și automatizări într-un spațiu tehnic finisat.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="incalzire" onclick="openLightbox(5)">
+                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="incalzire-civila" onclick="openLightbox(5)">
                     <img src="assets/termic-15.jpg" alt="Distribuitor PPR cu robineți">
                     <div class="portfolio-overlay">
                         <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
@@ -1503,17 +1510,17 @@
                     </div>
                     <div class="portfolio-caption"><h4>Distribuitor PPR</h4><p>Asamblare distribuitor pentru circuite multiple, cu robineți de separare și racorduri pregătite pentru conectarea traseelor.</p></div>
                 </div>
-                <div class="portfolio-item reveal" data-portfolio-category="incalzire" onclick="openLightbox(6)">
+                <div class="portfolio-item reveal" data-portfolio-category="anti-incendiu" onclick="openLightbox(6)">
                     <img src="assets/termic-14.jpg" alt="Trasee suspendate pe șantier industrial">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Trasee Industriale Suspendate</h4><p>Montaj la înălțime în spațiu comercial</p></div>
                     <div class="portfolio-caption"><h4>Trasee Industriale Suspendate</h4><p>Montaj conducte suspendate pentru sistem termic/HVAC într-o clădire industrială, cu lucru la înălțime și aliniere tehnică.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire" onclick="openLightbox(7)">
+                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="anti-incendiu" onclick="openLightbox(7)">
                     <img src="assets/termic-13.jpg" alt="Conducte roșii prin planșeu">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Trasee prin Planșeu</h4><p>Conducte industriale protejate</p></div>
                     <div class="portfolio-caption"><h4>Trasee prin Planșeu</h4><p>Execuție trasee de conducte prin planșeu, cu schimbări de direcție și prinderi pe plafon pentru instalații tehnice.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="sanitare" onclick="openLightbox(8)">
+                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="canalizare" onclick="openLightbox(8)">
                     <img src="assets/termic-12.jpg" alt="Trasee sanitare și distribuitor în baie">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Instalație Sanitară Îngropată</h4><p>Baie în construcție</p></div>
                     <div class="portfolio-caption"><h4>Instalație Sanitară Îngropată</h4><p>Poziționare trasee apă rece/caldă, scurgere și distribuitor pentru baie, pregătite pentru tencuire și finisare.</p></div>
@@ -1523,22 +1530,22 @@
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Montaj Aer Condiționat</h4><p>Unitate interioară Hisense</p></div>
                     <div class="portfolio-caption"><h4>Montaj Aer Condiționat</h4><p>Instalare unitate interioară de climatizare, racordare traseu frigorific și verificare funcționare după punere în lucru.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire" onclick="openLightbox(10)">
+                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire-civila" onclick="openLightbox(10)">
                     <img src="assets/termic-10.jpg" alt="Cutie distribuitor încălzire">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Distribuitor Încălzire</h4><p>Colector încastrat</p></div>
                     <div class="portfolio-caption"><h4>Distribuitor Încălzire</h4><p>Montaj colector pentru circuite de încălzire, cu robineți de reglaj și separare pentru fiecare zonă.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="sanitare" onclick="openLightbox(11)">
+                <div class="portfolio-item reveal reveal-delay-2" data-portfolio-category="canalizare" onclick="openLightbox(11)">
                     <img src="assets/termic-9.jpg" alt="Trasee în pardoseală pentru baie">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Trasee Apă în Pardoseală</h4><p>Pregătire baie nouă</p></div>
                     <div class="portfolio-caption"><h4>Trasee Apă în Pardoseală</h4><p>Distribuție apă rece/caldă și canalizare prin pardoseală, cu trasee protejate și pregătite pentru șapă.</p></div>
                 </div>
-                <div class="portfolio-item reveal" data-portfolio-category="incalzire" onclick="openLightbox(12)">
+                <div class="portfolio-item reveal" data-portfolio-category="incalzire-civila" onclick="openLightbox(12)">
                     <img src="assets/termic-8.jpg" alt="Racordare centrală termică">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Racordare Centrală</h4><p>Gaz, apă și condens</p></div>
                     <div class="portfolio-caption"><h4>Racordare Centrală</h4><p>Conectare centrală termică la alimentare, retur, evacuare condens și gaz, cu robineți și elemente de siguranță.</p></div>
                 </div>
-                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire" onclick="openLightbox(13)">
+                <div class="portfolio-item reveal reveal-delay-1" data-portfolio-category="incalzire-civila" onclick="openLightbox(13)">
                     <img src="assets/termic-7.jpg" alt="Centrală termică montată în mobilier">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Centrală Integrată în Mobilier</h4><p>Montaj rezidențial compact</p></div>
                     <div class="portfolio-caption"><h4>Centrală Integrată în Mobilier</h4><p>Montaj centrală termică într-un spațiu îngust, cu racorduri ascunse și acces pentru service.</p></div>
@@ -1563,7 +1570,7 @@
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>HVAC pe Acoperiș</h4><p>Mai multe unități externe</p></div>
                     <div class="portfolio-caption"><h4>HVAC pe Acoperiș</h4><p>Instalare și poziționare unități externe pentru climatizare comercială, cu trasee frigorifice și suporturi dedicate.</p></div>
                 </div>
-                <div class="portfolio-item reveal" data-portfolio-category="incalzire" onclick="openLightbox(18)">
+                <div class="portfolio-item reveal" data-portfolio-category="incalzire-civila" onclick="openLightbox(18)">
                     <img src="assets/termic-2.jpg" alt="Cameră tehnică cu boiler Vaillant">
                     <div class="portfolio-overlay"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div><h4>Cameră Tehnică Rezidențială</h4><p>Boiler, pompe și filtre</p></div>
                     <div class="portfolio-caption"><h4>Cameră Tehnică Rezidențială</h4><p>Racordare boiler Vaillant, pompe, filtre și conducte pentru încălzire și apă caldă într-o locuință.</p></div>
@@ -1840,7 +1847,7 @@
                 applyPortfolioFilter(btn.dataset.portfolioFilter);
             });
         });
-        applyPortfolioFilter('incalzire');
+        applyPortfolioFilter('incalzire-civila');
 
         function openServiceFilterModal(event) {
             if (event) event.preventDefault();
