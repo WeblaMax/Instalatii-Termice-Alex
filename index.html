@@ -102,20 +102,21 @@
             gap: 14px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            font-size: 1.58rem;
+            font-size: 1.72rem;
             letter-spacing: 0;
             color: var(--white);
             transition: var(--transition);
         }
         .navbar.scrolled .nav-logo { color: var(--dark); }
         .nav-logo img {
-            width: 82px;
-            height: 82px;
-            flex: 0 0 82px;
+            width: 96px;
+            height: 96px;
+            flex: 0 0 96px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
+            background: #050505;
             border: 3px solid var(--orange-4);
-            box-shadow: 0 0 24px rgba(255,107,0,0.42), 0 0 0 6px rgba(77,191,226,0.14);
+            box-shadow: 0 0 26px rgba(255,107,0,0.46), 0 0 0 6px rgba(77,191,226,0.16);
         }
         .brand-name {
             display: inline-flex;
@@ -1260,12 +1261,12 @@
                 min-width: 0;
                 flex: 1 1 auto;
                 gap: 9px;
-                font-size: clamp(1.08rem, 5vw, 1.28rem);
+                font-size: clamp(1.14rem, 5.4vw, 1.36rem);
             }
             .nav-logo img {
-                width: 62px;
-                height: 62px;
-                flex: 0 0 62px;
+                width: 72px;
+                height: 72px;
+                flex: 0 0 72px;
             }
             .brand-name {
                 min-width: 0;
@@ -1318,12 +1319,12 @@
         @media (max-width: 480px) {
             .nav-logo {
                 gap: 8px;
-                font-size: clamp(1rem, 5vw, 1.16rem);
+                font-size: clamp(1.04rem, 5.1vw, 1.22rem);
             }
             .nav-logo img {
-                width: 58px;
-                height: 58px;
-                flex-basis: 58px;
+                width: 66px;
+                height: 66px;
+                flex-basis: 66px;
             }
             .hero-content h1 { font-size: 1.7rem; }
             .hero-showcase { aspect-ratio: 1 / 1; }
