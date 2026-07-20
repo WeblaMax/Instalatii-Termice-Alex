@@ -1481,7 +1481,7 @@
                 <p>Câteva dintre lucrările finalizate cu succes pentru clienții noștri.</p>
             </div>
             <div class="portfolio-category-bar reveal reveal-delay-1">
-                <button class="portfolio-category-btn" data-portfolio-filter="incalzire"><i class="fas fa-temperature-high"></i> Încălzire</button>
+                <button class="portfolio-category-btn active" data-portfolio-filter="incalzire"><i class="fas fa-temperature-high"></i> Încălzire</button>
                 <span class="portfolio-category-dot"></span>
                 <button class="portfolio-category-btn" data-portfolio-filter="climatizare"><i class="fas fa-snowflake"></i> Climatizare</button>
                 <span class="portfolio-category-dot"></span>
@@ -1862,23 +1862,26 @@
         // ===== PORTFOLIO CATEGORY FILTER =====
         const portfolioCategoryBtns = document.querySelectorAll('.portfolio-category-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
+        function applyPortfolioFilter(filter) {
+            portfolioItems.forEach(item => {
+                if (item.dataset.portfolioCategory === filter) {
+                    item.classList.remove('hidden');
+                    item.style.animation = 'none';
+                    item.offsetHeight;
+                    item.style.animation = 'cardFadeIn 0.5s ease forwards';
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
         portfolioCategoryBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 portfolioCategoryBtns.forEach(button => button.classList.remove('active'));
                 btn.classList.add('active');
-                const filter = btn.dataset.portfolioFilter;
-                portfolioItems.forEach(item => {
-                    if (item.dataset.portfolioCategory === filter) {
-                        item.classList.remove('hidden');
-                        item.style.animation = 'none';
-                        item.offsetHeight;
-                        item.style.animation = 'cardFadeIn 0.5s ease forwards';
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
+                applyPortfolioFilter(btn.dataset.portfolioFilter);
             });
         });
+        applyPortfolioFilter('incalzire');
 
         function openServiceFilterModal(event) {
             if (event) event.preventDefault();
