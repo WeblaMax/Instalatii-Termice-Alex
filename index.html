@@ -525,7 +525,9 @@
             visibility: visible;
         }
         .service-filter-panel {
-            width: min(100%, 620px);
+            width: min(100%, 980px);
+            max-height: min(86vh, 840px);
+            overflow-y: auto;
             background:
                 linear-gradient(90deg, rgba(23,109,140,0.035) 1px, transparent 1px),
                 linear-gradient(180deg, rgba(23,109,140,0.025) 1px, transparent 1px),
@@ -1303,7 +1305,7 @@
                 <h1 class="reveal">Soluții Complete în <span>Instalații Termice</span></h1>
                 <p class="reveal reveal-delay-1">Montaj sisteme termice civile și industriale, camere tehnice, centrale, pompe de căldură, climatizare și instalații sanitare. Execuție curată, precisă și durabilă.</p>
                 <div class="hero-buttons reveal reveal-delay-2">
-                    <a href="#services" class="btn btn-primary"><i class="fas fa-fire"></i> Vezi Serviciile</a>
+                    <a href="#" onclick="openServiceFilterModal(event)" class="btn btn-primary"><i class="fas fa-fire"></i> Vezi Serviciile</a>
                     <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> Contactează-ne</a>
                 </div>
             </div>
@@ -1351,12 +1353,20 @@
         </div>
     </section>
 
-    <!-- SERVICII -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Serviciile <span>Noastre</span></h2>
-                <p>Servicii pentru locuințe, spații comerciale și obiective industriale: încălzire, sanitare, HVAC, camere tehnice și mentenanță.</p>
+    <!-- SERVICE FILTER MODAL -->
+    <div class="service-filter-modal" id="serviceFilterModal" onclick="closeServiceFilterModal(event)">
+        <div class="service-filter-panel" onclick="event.stopPropagation()">
+            <button class="service-filter-close" onclick="closeServiceFilterModal(event)" aria-label="Închide categoriile de servicii"><i class="fas fa-times"></i></button>
+            <h3>Serviciile Noastre</h3>
+            <p>Alege o categorie pentru a vedea doar serviciile relevante.</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Toate</button>
+                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="hvac">HVAC</button>
+                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
+                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
+                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
             </div>
             <div class="services-grid" id="servicesGrid">
                 <div class="service-card" data-category="incalzire">
@@ -1407,24 +1417,6 @@
                     <p>Intervenții rapide pentru avarii, scurgeri, probleme de presiune sau orice urgență în instalații.</p>
                     <span class="service-tag tag-mentenanta">Mentenanță</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICE FILTER MODAL -->
-    <div class="service-filter-modal" id="serviceFilterModal" onclick="closeServiceFilterModal(event)">
-        <div class="service-filter-panel" onclick="event.stopPropagation()">
-            <button class="service-filter-close" onclick="closeServiceFilterModal(event)" aria-label="Închide categoriile de servicii"><i class="fas fa-times"></i></button>
-            <h3>Alege categoria de servicii</h3>
-            <p>Filtrează rapid serviciile afișate în pagină.</p>
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">Toate</button>
-                <button class="filter-btn" data-filter="incalzire">Încălzire</button>
-                <button class="filter-btn" data-filter="industrial">Industrial</button>
-                <button class="filter-btn" data-filter="hvac">HVAC</button>
-                <button class="filter-btn" data-filter="apa">Apă Caldă</button>
-                <button class="filter-btn" data-filter="sanitare">Sanitare</button>
-                <button class="filter-btn" data-filter="mentenanta">Mentenanță</button>
             </div>
         </div>
     </div>
@@ -1719,7 +1711,7 @@
                 <div class="footer-links">
                     <a href="#hero">Acasă</a>
                     <a href="#about">Despre Noi</a>
-                    <a href="#services">Servicii</a>
+                    <a href="#" onclick="openServiceFilterModal(event)">Servicii</a>
                     <a href="#portfolio">Portofoliu</a>
                     <a href="#" onclick="openFaqModal(event)">FAQ</a>
                     <a href="#contact">Contact</a>
@@ -1796,8 +1788,6 @@
                         card.classList.add('hidden');
                     }
                 });
-                closeServiceFilterModal();
-                document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
