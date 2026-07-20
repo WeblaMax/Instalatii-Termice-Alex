@@ -700,13 +700,70 @@
             transform: rotate(90deg);
         }
 
-        /* FAQ */
-        .faq {
+        /* FAQ MODAL */
+        .faq-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            background: rgba(17,24,39,0.72);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        .faq-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .faq-dialog {
+            width: min(100%, 860px);
+            max-height: min(86vh, 820px);
+            overflow-y: auto;
             background:
                 linear-gradient(90deg, rgba(240,78,26,0.025) 1px, transparent 1px),
                 linear-gradient(180deg, rgba(23,109,140,0.03) 1px, transparent 1px),
                 linear-gradient(180deg, #FFFFFF 0%, #EEF9FC 100%);
             background-size: 54px 54px, 54px 54px, auto;
+            border: 1px solid rgba(120,203,230,0.35);
+            border-radius: 8px;
+            padding: 52px 28px 28px;
+            position: relative;
+            box-shadow: 0 30px 90px rgba(17,24,39,0.34);
+            transform: translateY(16px) scale(0.98);
+            transition: var(--transition);
+        }
+        .faq-modal.active .faq-dialog {
+            transform: translateY(0) scale(1);
+        }
+        .faq-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--dark);
+            font-size: 1.15rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .faq-close:hover {
+            background: var(--orange-4);
+            color: var(--white);
+        }
+        .faq-modal .section-header {
+            margin-bottom: 32px;
+        }
+        .faq-modal .reveal {
+            opacity: 1;
+            transform: none;
         }
         .faq-list {
             max-width: 800px;
@@ -1135,7 +1192,7 @@
                 <li><a href="#about">Despre Noi</a></li>
                 <li><a href="#services">Servicii</a></li>
                 <li><a href="#portfolio">Portofoliu</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#" onclick="openFaqModal(event)">FAQ</a></li>
                 <li><a href="#contact" class="nav-cta">Cere Ofertă</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -1419,9 +1476,10 @@
         </div>
     </div>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
+    <!-- FAQ MODAL -->
+    <div class="faq-modal" id="faqModal" onclick="closeFaqModal(event)">
+        <div class="faq-dialog" onclick="event.stopPropagation()">
+            <button class="faq-close" onclick="closeFaqModal(event)" aria-label="Închide întrebările frecvente"><i class="fas fa-times"></i></button>
             <div class="section-header reveal">
                 <h2>Întrebări <span>Frecvente</span></h2>
                 <p>Răspunsuri la cele mai comune întrebări ale clienților noștri.</p>
@@ -1483,7 +1541,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
@@ -1562,7 +1620,7 @@
                     <a href="#about">Despre Noi</a>
                     <a href="#services">Servicii</a>
                     <a href="#portfolio">Portofoliu</a>
-                    <a href="#faq">FAQ</a>
+                    <a href="#" onclick="openFaqModal(event)">FAQ</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
@@ -1651,6 +1709,26 @@
                 item.classList.add('active');
             }
         }
+
+        function openFaqModal(event) {
+            if (event) event.preventDefault();
+            const faqModal = document.getElementById('faqModal');
+            faqModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFaqModal(event) {
+            if (event) event.preventDefault();
+            const faqModal = document.getElementById('faqModal');
+            faqModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeFaqModal(event);
+            }
+        });
 
         // ===== LIGHTBOX =====
         const portfolioData = [
