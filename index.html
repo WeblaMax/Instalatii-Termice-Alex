@@ -31,6 +31,15 @@
             --shadow-lg: 0 16px 40px rgba(0,0,0,0.12);
             --shadow-orange: 0 8px 24px rgba(255,107,0,0.25);
             --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --blueprint-bg:
+                radial-gradient(circle at 14% 10%, rgba(77,191,226,0.24), transparent 30%),
+                radial-gradient(circle at 88% 16%, rgba(240,78,26,0.12), transparent 26%),
+                linear-gradient(90deg, rgba(23,109,140,0.13) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.105) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(23,109,140,0.052) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(23,109,140,0.046) 1px, transparent 1px),
+                linear-gradient(135deg, #EAF7FA 0%, #F5FBFC 46%, #FFFFFF 100%);
+            --blueprint-size: auto, auto, 72px 72px, 72px 72px, 24px 24px, 24px 24px, auto;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html {
@@ -41,13 +50,8 @@
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--dark);
-            background:
-                radial-gradient(circle at 12% 8%, rgba(77,191,226,0.16), transparent 28%),
-                radial-gradient(circle at 88% 18%, rgba(240,78,26,0.08), transparent 24%),
-                linear-gradient(90deg, rgba(23,109,140,0.07) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(23,109,140,0.052) 1px, transparent 1px),
-                linear-gradient(135deg, #F3FAFC 0%, #F8FBFC 42%, #FFFFFF 100%);
-            background-size: auto, auto, 56px 56px, 56px 56px, auto;
+            background: var(--blueprint-bg);
+            background-size: var(--blueprint-size);
             line-height: 1.7;
             overflow-x: hidden;
             max-width: 100%;
@@ -201,11 +205,10 @@
             align-items: center;
             position: relative;
             background:
-                radial-gradient(circle at 16% 24%, rgba(77,191,226,0.28), transparent 30%),
-                radial-gradient(circle at 82% 76%, rgba(240,78,26,0.12), transparent 28%),
-                linear-gradient(120deg, rgba(49,169,212,0.18) 0%, rgba(255,255,255,0) 34%),
-                linear-gradient(300deg, rgba(240,78,26,0.10) 0%, rgba(255,255,255,0) 28%),
-                linear-gradient(135deg, #EEF9FC 0%, #F8FCFD 46%, #FFFFFF 100%);
+                linear-gradient(120deg, rgba(49,169,212,0.18) 0%, rgba(255,255,255,0) 38%),
+                linear-gradient(300deg, rgba(240,78,26,0.11) 0%, rgba(255,255,255,0) 28%),
+                var(--blueprint-bg);
+            background-size: auto, auto, var(--blueprint-size);
             overflow: hidden;
             padding-top: 80px;
         }
@@ -214,17 +217,17 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background-image:
-                linear-gradient(90deg, rgba(23,109,140,0.045) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(23,109,140,0.035) 1px, transparent 1px),
-                linear-gradient(135deg, rgba(255,255,255,0.65), rgba(255,255,255,0));
-            background-size: 56px 56px, 56px 56px, auto;
+                repeating-linear-gradient(135deg, rgba(23,109,140,0.055) 0 1px, transparent 1px 34px),
+                linear-gradient(135deg, rgba(255,255,255,0.50), rgba(255,255,255,0));
+            background-size: auto, auto;
             pointer-events: none;
         }
         .hero-pipes {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            opacity: 0.04;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.18;
+            background-image: url("data:image/svg+xml,%3Csvg width='220' height='160' viewBox='0 0 220 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23176D8C' stroke-opacity='.34' stroke-width='1.4'%3E%3Cpath d='M18 38h72v36h64v48h42'/%3E%3Cpath d='M36 126h52V92h46V52h54'/%3E%3Ccircle cx='18' cy='38' r='4'/%3E%3Ccircle cx='90' cy='38' r='4'/%3E%3Ccircle cx='154' cy='74' r='4'/%3E%3Ccircle cx='196' cy='122' r='4'/%3E%3Ccircle cx='36' cy='126' r='4'/%3E%3Ccircle cx='188' cy='52' r='4'/%3E%3Cpath d='M112 14v26M99 27h26M14 88h28M28 74v28' stroke='%23F04E1A' stroke-opacity='.18'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 220px 160px;
             pointer-events: none;
         }
         .hero-container {
@@ -372,11 +375,8 @@
 
         /* DESPRE NOI */
         .about {
-            background:
-                linear-gradient(90deg, rgba(23,109,140,0.045) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(23,109,140,0.035) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(244,250,252,0.96) 100%);
-            background-size: 58px 58px, 58px 58px, auto;
+            background: var(--blueprint-bg);
+            background-size: var(--blueprint-size);
         }
         .about-grid {
             display: grid;
@@ -457,11 +457,8 @@
 
         /* SERVICII */
         .services {
-            background:
-                linear-gradient(90deg, rgba(23,109,140,0.035) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(23,109,140,0.025) 1px, transparent 1px),
-                linear-gradient(180deg, #EEF9FC 0%, #FFFFFF 100%);
-            background-size: 52px 52px, 52px 52px, auto;
+            background: var(--blueprint-bg);
+            background-size: var(--blueprint-size);
         }
         .filter-bar {
             display: flex;
@@ -665,12 +662,8 @@
 
         /* PORTOFOLIU */
         .portfolio {
-            background:
-                radial-gradient(circle at 86% 12%, rgba(77,191,226,0.15), transparent 26%),
-                linear-gradient(90deg, rgba(23,109,140,0.05) 1px, transparent 1px),
-                linear-gradient(180deg, rgba(23,109,140,0.036) 1px, transparent 1px),
-                linear-gradient(180deg, #F9FCFD 0%, #EEF7FA 100%);
-            background-size: auto, 56px 56px, 56px 56px, auto;
+            background: var(--blueprint-bg);
+            background-size: var(--blueprint-size);
         }
         .portfolio-grid {
             display: grid;
