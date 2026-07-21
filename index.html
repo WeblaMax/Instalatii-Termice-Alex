@@ -1275,7 +1275,56 @@
     color: var(--orange-3);
 }
 .legal-dialog {
-    width: min(100%, 920px);
+    width: min(calc(100% - 32px), 920px);
+    max-height: min(84vh, 780px);
+    margin: auto;
+    padding: 0;
+    border: 1px solid rgba(19, 91, 118, .18);
+    border-radius: 8px;
+    background: #f8fcfd;
+    color: #172033;
+    box-shadow: 0 24px 70px rgba(5, 20, 35, .45);
+}
+.legal-dialog::backdrop {
+    background: rgba(8, 20, 35, .72);
+    backdrop-filter: blur(4px);
+}
+.legal-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: #fff;
+    border-bottom: 1px solid rgba(19, 91, 118, .12);
+}
+.legal-dialog-header h2 {
+    margin: 0;
+    color: var(--dark);
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+}
+.legal-dialog-close {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    border: 0;
+    border-radius: 50%;
+    background: #eef7fa;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+.legal-dialog-close:hover {
+    background: var(--orange);
+    color: #fff;
+}
+.legal-dialog-body {
+    max-height: calc(min(84vh, 780px) - 82px);
+    overflow-y: auto;
+    padding: 24px;
 }
 .legal-content {
     max-width: 820px;
@@ -1315,6 +1364,37 @@
 .legal-list li {
     margin-bottom: 8px;
 }
+
+        @media (max-width: 480px) {
+            .footer-legal {
+                margin-top: 16px;
+                gap: 8px;
+            }
+
+            .legal-dialog {
+                width: calc(100% - 20px);
+                max-height: calc(100dvh - 20px);
+            }
+
+            .legal-dialog-header {
+                align-items: flex-start;
+                padding: 16px;
+            }
+
+            .legal-dialog-body {
+                max-height: calc(100dvh - 98px);
+                padding: 18px 16px;
+            }
+
+            .legal-content {
+                font-size: .94rem;
+                line-height: 1.65;
+            }
+
+            .legal-block {
+                padding: 16px;
+            }
+        }
 
         /* FLOATING WHATSAPP */
         .float-whatsapp {
@@ -2526,9 +2606,47 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Instalații Termice Alex. Toate drepturile rezervate. | Instalații cu Precizie, Căldură cu Pasiune</p>
+                <div class="footer-legal" aria-label="Documente legale">
+                    <a href="#politica-de-confidentialitate" onclick="openLegalDialog('privacyDialog', event)">Politica de confidențialitate</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="#termeni-si-conditii" onclick="openLegalDialog('termsDialog', event)">Termeni și condiții</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <dialog class="legal-dialog" id="privacyDialog" aria-labelledby="privacyDialogTitle">
+        <div class="legal-dialog-header">
+            <h2 id="privacyDialogTitle">Politica de confidențialitate</h2>
+            <button class="legal-dialog-close" type="button" onclick="closeLegalDialog('privacyDialog')" aria-label="Închide politica de confidențialitate"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="legal-dialog-body">
+            <div class="legal-content">
+                <p class="legal-meta">Ultima actualizare: 21 iulie 2026</p>
+                <section class="legal-block"><h3>1. Datele pe care le colectăm</h3><p>Prin formularul de contact putem primi numele, numărul de telefon, adresa de email și mesajul transmis de tine. Aceste date sunt oferite voluntar atunci când soliciți o ofertă sau dorești să fii contactat.</p></section>
+                <section class="legal-block"><h3>2. Cum folosim datele</h3><p>Folosim datele exclusiv pentru a răspunde solicitării tale, a pregăti o ofertă, a programa o vizită sau intervenție și a comunica în legătură cu serviciile solicitate.</p></section>
+                <section class="legal-block"><h3>3. Păstrarea și transmiterea datelor</h3><p>Nu vindem și nu închiriem datele personale. Datele pot fi comunicate doar furnizorilor implicați într-o lucrare, atunci când este necesar pentru executarea solicitării, sau autorităților competente dacă legea o impune.</p></section>
+                <section class="legal-block"><h3>4. Drepturile tale</h3><p>Poți cere accesul la datele tale, corectarea sau ștergerea acestora. Pentru orice solicitare, scrie-ne la <a href="mailto:instalatii.termice.alex@gmail.com">instalatii.termice.alex@gmail.com</a>.</p></section>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="legal-dialog" id="termsDialog" aria-labelledby="termsDialogTitle">
+        <div class="legal-dialog-header">
+            <h2 id="termsDialogTitle">Termeni și condiții</h2>
+            <button class="legal-dialog-close" type="button" onclick="closeLegalDialog('termsDialog')" aria-label="Închide termenii și condițiile"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="legal-dialog-body">
+            <div class="legal-content">
+                <p class="legal-meta">Ultima actualizare: 21 iulie 2026</p>
+                <section class="legal-block"><h3>1. Rolul site-ului</h3><p>Site-ul are rol de prezentare a serviciilor și lucrărilor realizate de Instalații Termice Alex. Imaginile din portofoliu sunt exemple ale proiectelor efectuate.</p></section>
+                <section class="legal-block"><h3>2. Cereri de ofertă</h3><p>Transmiterea unei solicitări prin formular, telefon, WhatsApp sau email nu reprezintă un contract. Prețul, durata și detaliile lucrării se confirmă ulterior, după analizarea cerințelor proiectului.</p></section>
+                <section class="legal-block"><h3>3. Programări și execuție</h3><p>Programările se stabilesc de comun acord, în funcție de disponibilitate și de condițiile tehnice ale locației. O ofertă personalizată este valabilă numai după comunicarea și acceptarea ei expresă.</p></section>
+                <section class="legal-block"><h3>4. Conținutul site-ului</h3><p>Textele, fotografiile, logo-ul și elementele vizuale de pe site nu pot fi copiate, distribuite sau utilizate în scop comercial fără acordul prealabil al titularului.</p></section>
+                <section class="legal-block"><h3>5. Contact</h3><p>Pentru întrebări referitoare la acești termeni, ne poți contacta la <a href="mailto:instalatii.termice.alex@gmail.com">instalatii.termice.alex@gmail.com</a>.</p></section>
+            </div>
+        </div>
+    </dialog>
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/37379393417?text=Bună,%20sunt%20interesat%20de%20serviciile%20voastre%20de%20instalații%20termice.%20Aș%20dori%20o%20ofertă." target="_blank" class="float-whatsapp" title="Scrie-ne pe WhatsApp">
@@ -2656,10 +2774,34 @@
             document.body.style.overflow = '';
         }
 
+        function openLegalDialog(dialogId, event) {
+            if (event) event.preventDefault();
+            const dialog = document.getElementById(dialogId);
+            if (dialog && !dialog.open) {
+                dialog.showModal();
+            }
+        }
+
+        function closeLegalDialog(dialogId) {
+            const dialog = document.getElementById(dialogId);
+            if (dialog && dialog.open) {
+                dialog.close();
+            }
+        }
+
+        document.querySelectorAll('.legal-dialog').forEach((dialog) => {
+            dialog.addEventListener('click', (event) => {
+                if (event.target === dialog) {
+                    dialog.close();
+                }
+            });
+        });
+
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
                 closeServiceFilterModal(event);
                 closeFaqModal(event);
+                document.querySelectorAll('.legal-dialog[open]').forEach((dialog) => dialog.close());
             }
         });
 
