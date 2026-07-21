@@ -974,6 +974,13 @@
             text-align: left;
             transition: var(--transition);
         }
+        .faq-question-text {
+            flex: 1 1 auto;
+            min-width: 0;
+            line-height: 1.4;
+            white-space: normal;
+            overflow-wrap: break-word;
+        }
         .faq-question:hover { color: var(--orange-4); }
         .faq-icon {
             width: 32px;
@@ -1371,6 +1378,37 @@
             .footer-content { flex-direction: column; text-align: center; }
             .lightbox-content { margin: 20px; }
             .lightbox-img { height: 250px; }
+            .faq-modal {
+                align-items: flex-start;
+                padding: 14px;
+                overflow-y: auto;
+            }
+            .faq-dialog {
+                width: 100%;
+                max-height: calc(100vh - 28px);
+                margin-top: 14px;
+                padding: 48px 16px 18px;
+            }
+            .faq-modal .section-header {
+                margin-bottom: 22px;
+            }
+            .faq-question {
+                align-items: flex-start;
+                gap: 12px;
+                padding: 18px 16px;
+                font-size: 0.95rem;
+                line-height: 1.35;
+            }
+            .faq-icon {
+                width: 28px;
+                height: 28px;
+                flex: 0 0 28px;
+                margin-left: 0;
+            }
+            .faq-item.active .faq-answer {
+                max-height: 520px;
+                padding: 0 16px 18px;
+            }
         }
         @media (max-width: 480px) {
             .nav-logo {
@@ -1389,6 +1427,23 @@
             .portfolio-category-btn { font-size: 0.82rem; }
             .portfolio-category-btn i { font-size: 1.15rem; }
             .partner-logo { width: 142px; }
+            .faq-modal {
+                padding: 10px;
+            }
+            .faq-dialog {
+                max-height: calc(100vh - 20px);
+                padding: 46px 12px 16px;
+            }
+            .faq-question {
+                padding: 16px 14px;
+                font-size: 0.9rem;
+                line-height: 1.38;
+            }
+            .faq-icon {
+                width: 26px;
+                height: 26px;
+                flex-basis: 26px;
+            }
             .whatsapp-cta { font-size: 0.95rem; padding: 14px 20px; }
         }
     </style>
@@ -2159,7 +2214,7 @@
             <div class="faq-list">
                 <div class="faq-item reveal">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Cât durează montajul unei centrale termice?
+                        <span class="faq-question-text">Cât durează montajul unei centrale termice?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
@@ -2168,7 +2223,7 @@
                 </div>
                 <div class="faq-item reveal reveal-delay-1">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Oferiți garanție pentru lucrări?
+                        <span class="faq-question-text">Oferiți garanție pentru lucrări?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
@@ -2177,7 +2232,7 @@
                 </div>
                 <div class="faq-item reveal reveal-delay-2">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Lucrați și în weekend?
+                        <span class="faq-question-text">Lucrați și în weekend?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
@@ -2186,7 +2241,7 @@
                 </div>
                 <div class="faq-item reveal reveal-delay-3">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Cum pot obține o estimare de preț?
+                        <span class="faq-question-text">Cum pot obține o estimare de preț?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
@@ -2195,7 +2250,7 @@
                 </div>
                 <div class="faq-item reveal reveal-delay-4">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Ce mărci de echipamente recomandați?
+                        <span class="faq-question-text">Ce mărci de echipamente recomandați?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
@@ -2204,7 +2259,7 @@
                 </div>
                 <div class="faq-item reveal reveal-delay-5">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        Cât de des trebuie făcută revizia centralei?
+                        <span class="faq-question-text">Cât de des trebuie făcută revizia centralei?</span>
                         <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </button>
                     <div class="faq-answer">
