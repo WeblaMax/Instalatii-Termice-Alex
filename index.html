@@ -1154,10 +1154,53 @@
             font: inherit;
         }
 
+        .review-form .form-group {
+            margin-bottom: 16px;
+            padding: 13px 14px 14px;
+            border: 1px solid rgba(49, 169, 212, 0.22);
+            border-radius: 13px;
+            background: linear-gradient(135deg, rgba(225, 246, 252, 0.88), rgba(255, 249, 244, 0.9));
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .review-form .form-group:focus-within {
+            border-color: rgba(23, 109, 140, 0.65);
+            box-shadow: 0 0 0 3px rgba(77, 191, 226, 0.14);
+        }
+
+        .review-form .form-group label {
+            display: inline-block;
+            margin: 0 0 9px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: #dff4fa;
+            color: var(--ice-blue-dark);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .review-form input,
+        .review-form textarea,
+        .review-form select {
+            border-color: #b9dfeb;
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .review-form input:focus,
+        .review-form textarea:focus,
+        .review-form select:focus {
+            outline: none;
+            border-color: var(--ice-blue);
+        }
+
         .rating-picker {
             display: inline-flex;
             flex-direction: row-reverse;
             gap: 4px;
+            padding: 8px 11px;
+            border-radius: 10px;
+            background: #fff;
+            border: 1px solid #b9dfeb;
         }
 
         .rating-picker input { display: none; }
