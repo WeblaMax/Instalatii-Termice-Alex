@@ -1017,6 +1017,188 @@
             line-height: 1.7;
         }
 
+        /* RECENZII */
+        .reviews {
+            padding: 110px 0;
+            background: linear-gradient(135deg, rgba(238, 249, 252, 0.96), rgba(255, 255, 255, 0.98));
+        }
+
+        .reviews-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+            gap: 32px;
+            align-items: start;
+        }
+
+        .reviews-overview,
+        .review-form-panel {
+            background: rgba(255, 255, 255, 0.93);
+            border: 1px solid rgba(49, 169, 212, 0.22);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 18px 45px rgba(23, 109, 140, 0.09);
+        }
+
+        .review-summary {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(23, 109, 140, 0.12);
+        }
+
+        .review-average {
+            min-width: 92px;
+            color: var(--ice-blue-dark);
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .review-stars,
+        .review-card-stars {
+            color: var(--orange-3);
+            font-size: 1.12rem;
+            letter-spacing: 2px;
+        }
+
+        .reviews-count {
+            margin: 7px 0 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .reviews-list {
+            display: grid;
+            gap: 16px;
+            max-height: 610px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .review-card {
+            padding: 20px;
+            border: 1px solid rgba(23, 109, 140, 0.12);
+            border-radius: 14px;
+            background: #fff;
+        }
+
+        .review-card-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .review-card-name {
+            display: block;
+            color: var(--dark);
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .review-card-meta {
+            display: block;
+            margin-top: 3px;
+            color: var(--ice-blue-dark);
+            font-size: 0.83rem;
+            font-weight: 600;
+        }
+
+        .review-card-date {
+            color: var(--gray);
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .review-card p {
+            margin: 0;
+            color: var(--gray);
+            line-height: 1.65;
+            white-space: pre-line;
+        }
+
+        .reviews-loading,
+        .reviews-empty,
+        .reviews-error {
+            padding: 26px 18px;
+            border-radius: 12px;
+            text-align: center;
+            color: var(--gray);
+            background: rgba(238, 249, 252, 0.7);
+        }
+
+        .reviews-error { color: var(--orange-5); }
+
+        .review-form-panel h3 {
+            margin: 0 0 9px;
+            color: var(--ice-blue-dark);
+            font-size: 1.55rem;
+        }
+
+        .review-form-panel > p {
+            margin: 0 0 22px;
+            color: var(--gray);
+            line-height: 1.55;
+        }
+
+        .review-form select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(23, 109, 140, 0.18);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--dark);
+            font: inherit;
+        }
+
+        .rating-picker {
+            display: inline-flex;
+            flex-direction: row-reverse;
+            gap: 4px;
+        }
+
+        .rating-picker input { display: none; }
+
+        .rating-picker label {
+            color: #c8d5da;
+            cursor: pointer;
+            font-size: 2rem;
+            line-height: 1;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .rating-picker label:hover,
+        .rating-picker label:hover ~ label,
+        .rating-picker input:checked ~ label { color: var(--orange-3); }
+
+        .rating-picker label:hover { transform: scale(1.12); }
+
+        .review-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin: 18px 0;
+            color: var(--gray);
+            font-size: 0.85rem;
+            line-height: 1.45;
+        }
+
+        .review-consent input { margin-top: 3px; }
+        .review-consent a { color: var(--ice-blue-dark); font-weight: 600; }
+
+        .review-status {
+            min-height: 20px;
+            margin: 14px 0 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .review-status.is-success { color: #16834b; }
+        .review-status.is-error { color: var(--orange-5); }
+
         /* CONTACT */
         .contact {
             background:
@@ -1688,6 +1870,14 @@
             }
             .whatsapp-cta { font-size: 0.95rem; padding: 14px 20px; }
         }
+        @media (max-width: 768px) {
+            .reviews { padding: 72px 0; }
+            .reviews-layout { grid-template-columns: 1fr; gap: 22px; }
+            .reviews-overview,
+            .review-form-panel { padding: 24px 18px; }
+            .review-card-head { flex-direction: column; gap: 8px; }
+            .review-card-date { white-space: normal; }
+        }
     </style>
 </head>
 <body>
@@ -1704,6 +1894,7 @@
                 <li><a href="#about">Despre Noi</a></li>
                 <li><a href="#" onclick="openServiceFilterModal(event)">Servicii</a></li>
                 <li><a href="#portfolio">Portofoliu</a></li>
+                <li><a href="#recenzii">Recenzii</a></li>
                 <li><a href="#" onclick="openFaqModal(event)">FAQ</a></li>
                 <li><a href="#contact" class="nav-cta">Cere Ofertă</a></li>
             </ul>
@@ -2516,7 +2707,77 @@
         </div>
     </div>
 
-    <!-- CONTACT -->
+        <!-- RECENZII -->
+        <section class="reviews" id="recenzii">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Recenziile <span>Clienților</span></h2>
+                    <p>Păreri publice de la clienții pentru care am realizat lucrări.</p>
+                </div>
+
+                <div class="reviews-layout">
+                    <div class="reviews-overview reveal">
+                        <div class="review-summary" aria-live="polite">
+                            <div class="review-average" id="reviewsAverage">-</div>
+                            <div>
+                                <div class="review-stars" id="reviewsAverageStars" aria-label="Evaluare medie">★★★★★</div>
+                                <p class="reviews-count" id="reviewsCount">Se încarcă recenziile...</p>
+                            </div>
+                        </div>
+                        <div class="reviews-list" id="reviewsList" aria-live="polite">
+                            <div class="reviews-loading">Se încarcă recenziile...</div>
+                        </div>
+                    </div>
+
+                    <div class="review-form-panel reveal reveal-delay-1">
+                        <h3>Lasă o recenzie</h3>
+                        <p>Recenzia este publicată direct pe site după trimitere.</p>
+                        <form class="review-form" id="reviewForm">
+                            <div class="form-group">
+                                <label for="reviewName">Numele tău</label>
+                                <input id="reviewName" name="nume" type="text" minlength="2" maxlength="60" required placeholder="Ex: Ion Popescu">
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewService">Serviciul efectuat</label>
+                                <select id="reviewService" name="serviciu" required>
+                                    <option value="" selected disabled>Alege serviciul</option>
+                                    <option>Încălzire civilă</option>
+                                    <option>Încălzire industrială</option>
+                                    <option>Climatizare</option>
+                                    <option>Ventilare</option>
+                                    <option>Instalații sanitare</option>
+                                    <option>Canalizare</option>
+                                    <option>Anti-incendiu</option>
+                                    <option>Alt serviciu</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Evaluarea ta</label>
+                                <div class="rating-picker" aria-label="Alege evaluarea de la 1 la 5 stele">
+                                    <input id="rating5" name="rating" type="radio" value="5" checked><label for="rating5" title="5 stele">★</label>
+                                    <input id="rating4" name="rating" type="radio" value="4"><label for="rating4" title="4 stele">★</label>
+                                    <input id="rating3" name="rating" type="radio" value="3"><label for="rating3" title="3 stele">★</label>
+                                    <input id="rating2" name="rating" type="radio" value="2"><label for="rating2" title="2 stele">★</label>
+                                    <input id="rating1" name="rating" type="radio" value="1"><label for="rating1" title="1 stea">★</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewMessage">Recenzia ta</label>
+                                <textarea id="reviewMessage" name="mesaj" minlength="10" maxlength="800" required placeholder="Spune-ne pe scurt cum a fost experiența ta..."></textarea>
+                            </div>
+                            <label class="review-consent">
+                                <input type="checkbox" required>
+                                <span>Sunt de acord cu publicarea recenziei și cu <a href="#" onclick="openLegalDialog('privacyDialog', event)">Politica de confidențialitate</a>.</span>
+                            </label>
+                            <button class="btn-submit" id="reviewSubmit" type="submit"><i class="fas fa-paper-plane"></i> Publică Recenzia</button>
+                            <p class="review-status" id="reviewStatus" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header reveal">
@@ -2959,6 +3220,171 @@
                 document.body.style.overflow = '';
             }
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        (() => {
+            const SUPABASE_URL = 'https://uszkptodqgcqevsjwfxf.supabase.co';
+            const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_PCvG5YxsNSZMP9KCrEq0bA_qGrLQfrg';
+
+            const list = document.getElementById('reviewsList');
+            const average = document.getElementById('reviewsAverage');
+            const averageStars = document.getElementById('reviewsAverageStars');
+            const count = document.getElementById('reviewsCount');
+            const form = document.getElementById('reviewForm');
+            const status = document.getElementById('reviewStatus');
+            const submitButton = document.getElementById('reviewSubmit');
+
+            if (!list || !form) return;
+
+            const client = window.supabase && window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_PUBLISHABLE_KEY
+            );
+
+            const getStars = (rating) => Array.from(
+                { length: 5 },
+                (_, index) => index < Number(rating) ? '★' : '☆'
+            ).join('');
+
+            const setStatus = (message, type = '') => {
+                status.textContent = message;
+                status.className = `review-status${type ? ` is-${type}` : ''}`;
+            };
+
+            const formatDate = (value) => {
+                try {
+                    return new Intl.DateTimeFormat('ro-RO', { dateStyle: 'medium' }).format(new Date(value));
+                } catch (error) {
+                    return 'Recent';
+                }
+            };
+
+            const renderReviews = (items) => {
+                list.replaceChildren();
+
+                if (!items.length) {
+                    const empty = document.createElement('div');
+                    empty.className = 'reviews-loading';
+                    empty.textContent = 'Încă nu există recenzii. Fii primul care lasă o părere.';
+                    list.appendChild(empty);
+                    average.textContent = '-';
+                    averageStars.textContent = '★★★★★';
+                    count.textContent = 'Încă nu există recenzii.';
+                    return;
+                }
+
+                const total = items.reduce((sum, item) => sum + Number(item.rating), 0);
+                const score = total / items.length;
+                average.textContent = score.toFixed(1);
+                averageStars.textContent = getStars(Math.round(score));
+                count.textContent = `${items.length} ${items.length === 1 ? 'recenzie publicată' : 'recenzii publicate'}`;
+
+                items.forEach((item) => {
+                    const card = document.createElement('article');
+                    card.className = 'review-card';
+
+                    const header = document.createElement('div');
+                    header.className = 'review-card-head';
+
+                    const author = document.createElement('div');
+                    const name = document.createElement('strong');
+                    name.textContent = item.nume;
+                    const service = document.createElement('span');
+                    service.textContent = item.serviciu;
+                    author.append(name, service);
+
+                    const meta = document.createElement('div');
+                    meta.className = 'review-card-meta';
+                    const stars = document.createElement('div');
+                    stars.className = 'review-card-stars';
+                    stars.setAttribute('aria-label', `${item.rating} din 5 stele`);
+                    stars.textContent = getStars(item.rating);
+                    const date = document.createElement('span');
+                    date.className = 'review-card-date';
+                    date.textContent = formatDate(item.created_at);
+                    meta.append(stars, date);
+
+                    header.append(author, meta);
+                    const message = document.createElement('p');
+                    message.textContent = item.mesaj;
+                    card.append(header, message);
+                    list.appendChild(card);
+                });
+            };
+
+            const loadReviews = async () => {
+                if (!client) {
+                    list.textContent = 'Recenziile nu pot fi încărcate acum.';
+                    return;
+                }
+
+                const loading = document.createElement('div');
+                loading.className = 'reviews-loading';
+                loading.textContent = 'Se încarcă recenziile...';
+                list.replaceChildren(loading);
+
+                const { data, error } = await client
+                    .from('recenzii')
+                    .select('id, nume, serviciu, rating, mesaj, created_at')
+                    .order('created_at', { ascending: false })
+                    .limit(100);
+
+                if (error) {
+                    console.error('Nu s-au putut încărca recenziile:', error);
+                    list.textContent = 'Recenziile nu pot fi încărcate acum.';
+                    return;
+                }
+
+                renderReviews(data || []);
+            };
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                if (!form.reportValidity()) return;
+
+                if (!client) {
+                    setStatus('Conexiunea pentru recenzii nu este disponibilă acum.', 'error');
+                    return;
+                }
+
+                const values = new FormData(form);
+                const payload = {
+                    nume: values.get('nume').trim(),
+                    serviciu: values.get('serviciu'),
+                    rating: Number(values.get('rating')),
+                    mesaj: values.get('mesaj').trim()
+                };
+
+                if (payload.nume.length < 2 || payload.mesaj.length < 10 || !payload.serviciu) {
+                    setStatus('Completează toate câmpurile înainte de publicare.', 'error');
+                    return;
+                }
+
+                const originalButton = submitButton.innerHTML;
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Se publică...';
+                setStatus('');
+
+                try {
+                    const { error } = await client.from('recenzii').insert(payload);
+                    if (error) throw error;
+
+                    form.reset();
+                    document.getElementById('rating5').checked = true;
+                    setStatus('Mulțumim! Recenzia a fost publicată.', 'success');
+                    await loadReviews();
+                } catch (error) {
+                    console.error('Nu s-a putut publica recenzia:', error);
+                    setStatus('Recenzia nu a putut fi publicată. Încearcă din nou.', 'error');
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButton;
+                }
+            });
+
+            loadReviews();
+        })();
     </script>
 </body>
 </html>
