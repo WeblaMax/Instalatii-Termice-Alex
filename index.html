@@ -1188,6 +1188,21 @@
             caret-color: #111827;
         }
 
+        /* Keep typed review text readable even when generic form styles are applied later. */
+        #reviewForm input,
+        #reviewForm textarea,
+        #reviewForm select {
+            color: #111827 !important;
+            -webkit-text-fill-color: #111827 !important;
+            caret-color: #111827 !important;
+        }
+
+        #reviewForm input::placeholder,
+        #reviewForm textarea::placeholder {
+            color: #64748b !important;
+            opacity: 1;
+        }
+
         .review-form input:focus,
         .review-form textarea:focus,
         .review-form select:focus {
@@ -1375,6 +1390,19 @@
         .form-group input::placeholder,
         .form-group textarea::placeholder {
             color: rgba(255,255,255,0.4);
+        }
+        /* Review fields use a light surface, so entered text must stay dark. */
+        #reviewName,
+        #reviewService,
+        #reviewMessage {
+            color: #111827 !important;
+            -webkit-text-fill-color: #111827 !important;
+            caret-color: #111827 !important;
+        }
+        #reviewName::placeholder,
+        #reviewMessage::placeholder {
+            color: #64748b !important;
+            opacity: 1;
         }
         .form-group textarea {
             min-height: 120px;
