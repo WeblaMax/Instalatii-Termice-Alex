@@ -2101,8 +2101,16 @@
                 <h2>Proiectele <span>Noastre</span></h2>
                 <p>Câteva dintre lucrările finalizate cu succes pentru clienții noștri.</p>
             </div>
-            <div class="portfolio-category-bar reveal reveal-delay-1">
-                <button class="portfolio-category-btn active" data-portfolio-filter="incalzire-civila"><i class="fas fa-house-fire"></i> Încălzire Civilă</button>
+            <a class="portfolio-category-cue reveal reveal-delay-1" href="#portfolio-filters">
+                <span class="portfolio-category-cue__icon"><i class="fas fa-hand-pointer"></i></span>
+                <span class="portfolio-category-cue__copy">
+                    <span class="portfolio-category-cue__eyebrow">Portofoliu pe specializări</span>
+                    <strong class="portfolio-category-cue__title">Alege o subcategorie pentru a vedea lucrările</strong>
+                </span>
+                <i class="fas fa-arrow-down portfolio-category-cue__arrow" aria-hidden="true"></i>
+            </a>
+            <div class="portfolio-category-bar reveal reveal-delay-1" id="portfolio-filters">
+                <button class="portfolio-category-btn" data-portfolio-filter="incalzire-civila"><i class="fas fa-house-fire"></i> Încălzire Civilă</button>
                 <span class="portfolio-category-dot"></span>
                 <button class="portfolio-category-btn" data-portfolio-filter="incalzire-industriala"><i class="fas fa-industry"></i> Încălzire Industrială</button>
                 <span class="portfolio-category-dot"></span>
@@ -2116,7 +2124,8 @@
                 <span class="portfolio-category-dot"></span>
                 <button class="portfolio-category-btn" data-portfolio-filter="canalizare"><i class="fas fa-water"></i> Canalizare</button>
             </div>
-            <div class="portfolio-grid">
+            <p class="portfolio-empty-state" id="portfolio-empty-state">Selectează o subcategorie pentru a explora lucrările realizate.</p>
+            <div class="portfolio-grid is-collapsed">
                                 <div class="portfolio-item reveal" data-portfolio-category="climatizare" onclick="openLightbox(66)">
                     <img src="assets/clima-a-18.jpeg" alt="Casete HVAC in Constructie">
                     <div class="portfolio-overlay">
@@ -3168,9 +3177,15 @@
         // ===== PORTFOLIO CATEGORY FILTER =====
         const portfolioCategoryBtns = document.querySelectorAll('.portfolio-category-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const portfolioGrid = document.querySelector('#portfolio .portfolio-grid');
+        const portfolioEmptyState = document.getElementById('portfolio-empty-state');
+        let activePortfolioCategory = null;
+
         function applyPortfolioFilter(filter) {
             portfolioItems.forEach(item => {
-                if (item.dataset.portfolioCategory === filter) {
+                const isVisible = Boolean(filter) && item.dataset.portfolioCategory === filter;
+
+                if (isVisible) {
                     item.classList.remove('hidden');
                     item.style.animation = 'none';
                     item.offsetHeight;
@@ -3179,15 +3194,30 @@
                     item.classList.add('hidden');
                 }
             });
+
+            portfolioGrid?.classList.toggle('is-collapsed', !filter);
+            if (portfolioEmptyState) {
+                portfolioEmptyState.hidden = Boolean(filter);
+            }
         }
+
         portfolioCategoryBtns.forEach(btn => {
+            btn.setAttribute('aria-expanded', 'false');
             btn.addEventListener('click', () => {
-                portfolioCategoryBtns.forEach(button => button.classList.remove('active'));
-                btn.classList.add('active');
-                applyPortfolioFilter(btn.dataset.portfolioFilter);
+                const category = btn.dataset.portfolioFilter;
+                activePortfolioCategory = activePortfolioCategory === category ? null : category;
+
+                portfolioCategoryBtns.forEach(button => {
+                    const isActive = button.dataset.portfolioFilter === activePortfolioCategory;
+                    button.classList.toggle('active', isActive);
+                    button.setAttribute('aria-expanded', String(isActive));
+                });
+
+                applyPortfolioFilter(activePortfolioCategory);
             });
         });
-        applyPortfolioFilter('incalzire-civila');
+
+        applyPortfolioFilter(activePortfolioCategory);
 
         function openServiceFilterModal(event) {
             if (event) event.preventDefault();
