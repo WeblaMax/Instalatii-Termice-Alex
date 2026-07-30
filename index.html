@@ -1875,7 +1875,38 @@
             .hero-content h1 { font-size: 2rem; }
             .hero-buttons { flex-direction: column; align-items: center; }
             .btn { width: 100%; max-width: 280px; justify-content: center; }
-            .stats-row { grid-template-columns: 1fr; }
+            .stats-row {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 8px;
+                margin-top: 28px;
+            }
+
+            .stat-card {
+                min-width: 0;
+                min-height: 148px;
+                padding: 16px 6px;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .stat-card i {
+                font-size: 1.4rem;
+                margin-bottom: 8px;
+            }
+
+            .stat-card h4 {
+                font-size: 1.2rem;
+                margin-bottom: 4px;
+            }
+
+            .stat-card p {
+                font-size: 0.68rem;
+                line-height: 1.25;
+                overflow-wrap: anywhere;
+            }
             .partners-strip {
                 margin-top: 28px;
                 border-radius: 18px;
